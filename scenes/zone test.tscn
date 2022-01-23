@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/draged.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/rest_position.tscn" type="PackedScene" id=2]
+
+[node name="drag zone" type="Node2D"]
+
+[node name="rest" parent="." instance=ExtResource( 2 )]
+position = Vector2( 378, 253 )
+
+[node name="rest2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 798, 136 )
+
+[node name="rest3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 712, 378 )
+
+[node name="draged" parent="." instance=ExtResource( 1 )]
+position = Vector2( 62, 278 )
