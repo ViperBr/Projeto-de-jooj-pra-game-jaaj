@@ -6,7 +6,7 @@
 [sub_resource type="Theme" id=1]
 
 [sub_resource type="DynamicFont" id=2]
-size = 96
+size = 128
 font_data = ExtResource( 1 )
 
 [sub_resource type="Theme" id=3]
@@ -38,7 +38,6 @@ __meta__ = {
 }
 
 [node name="layerBase" type="ColorRect" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
@@ -47,10 +46,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="layerBase"]
-margin_left = 440.0
-margin_top = 96.0
-margin_right = 972.0
-margin_bottom = 193.0
+margin_left = 1056.0
+margin_top = 184.0
+margin_right = 1770.0
+margin_bottom = 313.0
 theme = SubResource( 1 )
 custom_fonts/font = SubResource( 2 )
 text = "O nome do jogo"
@@ -59,10 +58,10 @@ __meta__ = {
 }
 
 [node name="newGame" type="Button" parent="layerBase"]
-margin_left = 104.0
-margin_top = 216.0
-margin_right = 366.0
-margin_bottom = 255.0
+margin_left = 248.0
+margin_top = 448.0
+margin_right = 510.0
+margin_bottom = 487.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "iniciar jogo"
@@ -71,10 +70,10 @@ __meta__ = {
 }
 
 [node name="loadGame" type="Button" parent="layerBase"]
-margin_left = 104.0
-margin_top = 280.0
-margin_right = 366.0
-margin_bottom = 319.0
+margin_left = 248.0
+margin_top = 512.0
+margin_right = 510.0
+margin_bottom = 551.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "carregar jogo"
@@ -83,10 +82,10 @@ __meta__ = {
 }
 
 [node name="settings" type="Button" parent="layerBase"]
-margin_left = 104.0
-margin_top = 344.0
-margin_right = 366.0
-margin_bottom = 383.0
+margin_left = 248.0
+margin_top = 576.0
+margin_right = 510.0
+margin_bottom = 615.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "configurações"
@@ -95,10 +94,10 @@ __meta__ = {
 }
 
 [node name="exit" type="Button" parent="layerBase"]
-margin_left = 104.0
-margin_top = 413.0
-margin_right = 366.0
-margin_bottom = 452.0
+margin_left = 248.0
+margin_top = 645.0
+margin_right = 510.0
+margin_bottom = 684.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "sair"
@@ -168,7 +167,6 @@ __meta__ = {
 }
 
 [node name="layerNewGame" type="ColorRect" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
@@ -177,10 +175,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="layerNewGame"]
-margin_left = 344.0
+margin_left = 776.0
 margin_top = 48.0
-margin_right = 686.0
-margin_bottom = 145.0
+margin_right = 1235.0
+margin_bottom = 177.0
 theme = SubResource( 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Novo Jogo"
@@ -189,10 +187,10 @@ __meta__ = {
 }
 
 [node name="slot1" type="Button" parent="layerNewGame"]
-margin_left = 104.0
-margin_top = 216.0
-margin_right = 921.0
-margin_bottom = 255.0
+margin_left = 568.0
+margin_top = 296.0
+margin_right = 1385.0
+margin_bottom = 335.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "slot 1"
@@ -201,10 +199,10 @@ __meta__ = {
 }
 
 [node name="slot2" type="Button" parent="layerNewGame"]
-margin_left = 104.0
-margin_top = 280.0
-margin_right = 921.0
-margin_bottom = 319.0
+margin_left = 568.0
+margin_top = 360.0
+margin_right = 1385.0
+margin_bottom = 399.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "slot 2"
@@ -213,10 +211,10 @@ __meta__ = {
 }
 
 [node name="slot3" type="Button" parent="layerNewGame"]
-margin_left = 104.0
-margin_top = 344.0
-margin_right = 921.0
-margin_bottom = 383.0
+margin_left = 568.0
+margin_top = 424.0
+margin_right = 1385.0
+margin_bottom = 463.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "slot 3"
@@ -225,10 +223,10 @@ __meta__ = {
 }
 
 [node name="back" type="Button" parent="layerNewGame"]
-margin_left = 24.0
-margin_top = 528.0
-margin_right = 286.0
-margin_bottom = 567.0
+margin_left = 224.0
+margin_top = 848.0
+margin_right = 486.0
+margin_bottom = 887.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "voltar"
@@ -245,10 +243,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="layerLoadGame"]
-margin_left = 264.0
-margin_top = 48.0
-margin_right = 758.0
-margin_bottom = 145.0
+margin_left = 680.0
+margin_top = 56.0
+margin_right = 1343.0
+margin_bottom = 185.0
 theme = SubResource( 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Carregar Jogo"
@@ -257,10 +255,10 @@ __meta__ = {
 }
 
 [node name="save1" type="Button" parent="layerLoadGame"]
-margin_left = 104.0
-margin_top = 216.0
-margin_right = 921.0
-margin_bottom = 255.0
+margin_left = 600.0
+margin_top = 312.0
+margin_right = 1417.0
+margin_bottom = 351.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "save 1"
@@ -269,10 +267,10 @@ __meta__ = {
 }
 
 [node name="save2" type="Button" parent="layerLoadGame"]
-margin_left = 104.0
-margin_top = 280.0
-margin_right = 921.0
-margin_bottom = 319.0
+margin_left = 600.0
+margin_top = 376.0
+margin_right = 1417.0
+margin_bottom = 415.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "save 2"
@@ -281,10 +279,10 @@ __meta__ = {
 }
 
 [node name="save3" type="Button" parent="layerLoadGame"]
-margin_left = 104.0
-margin_top = 344.0
-margin_right = 921.0
-margin_bottom = 383.0
+margin_left = 600.0
+margin_top = 440.0
+margin_right = 1417.0
+margin_bottom = 479.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "save 3"
@@ -293,10 +291,10 @@ __meta__ = {
 }
 
 [node name="back" type="Button" parent="layerLoadGame"]
-margin_left = 24.0
-margin_top = 528.0
-margin_right = 286.0
-margin_bottom = 567.0
+margin_left = 248.0
+margin_top = 856.0
+margin_right = 510.0
+margin_bottom = 895.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "voltar"
@@ -340,7 +338,6 @@ custom_fonts/font = SubResource( 8 )
 text = "ok"
 
 [node name="layerConfigs" type="ColorRect" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
@@ -364,10 +361,10 @@ __meta__ = {
 }
 
 [node name="back" type="Button" parent="layerConfigs"]
-margin_left = 24.0
-margin_top = 528.0
-margin_right = 286.0
-margin_bottom = 567.0
+margin_left = 112.0
+margin_top = 936.0
+margin_right = 374.0
+margin_bottom = 975.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "voltar"
