@@ -237,7 +237,6 @@ __meta__ = {
 }
 
 [node name="layerLoadGame" type="ColorRect" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
@@ -264,7 +263,7 @@ margin_right = 921.0
 margin_bottom = 255.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
-text = "slot 1"
+text = "save 1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -276,7 +275,7 @@ margin_right = 921.0
 margin_bottom = 319.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
-text = "slot 2"
+text = "save 2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -288,7 +287,7 @@ margin_right = 921.0
 margin_bottom = 383.0
 theme = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
-text = "slot 3"
+text = "save 3"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -305,7 +304,43 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="error" type="ColorRect" parent="layerLoadGame"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.541176 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="layerLoadGame/error"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -182.0
+margin_top = -38.0
+margin_right = 182.0
+margin_bottom = 38.0
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "erro: nenhum save encontrado"
+
+[node name="ok" type="Button" parent="layerLoadGame/error"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -38.0
+margin_top = -267.568
+margin_right = 38.0
+margin_bottom = -213.568
+theme = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+text = "ok"
+
 [node name="layerConfigs" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
@@ -354,4 +389,5 @@ __meta__ = {
 [connection signal="button_up" from="layerLoadGame/save2" to="." method="_on_save2_button_up"]
 [connection signal="button_up" from="layerLoadGame/save3" to="." method="_on_save3_button_up"]
 [connection signal="button_up" from="layerLoadGame/back" to="." method="_on_back_button_up"]
+[connection signal="button_up" from="layerLoadGame/error/ok" to="." method="_on_ok_button_up"]
 [connection signal="button_up" from="layerConfigs/back" to="." method="_on_back_button_up"]
