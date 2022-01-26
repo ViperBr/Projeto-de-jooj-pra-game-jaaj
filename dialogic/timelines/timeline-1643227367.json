@@ -38,7 +38,7 @@
 			"question": "Opções:"
 		},
 		{
-			"choice": "Dizer: \"Eu posso parar com esse jogo quando eu quiser?",
+			"choice": "Eu posso parar com esse jogo quando eu quiser?",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",

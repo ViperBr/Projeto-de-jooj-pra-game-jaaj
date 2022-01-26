@@ -8,6 +8,7 @@
 [node name="inicio_do_jogo" type="Node"]
 
 [node name="Dialog" parent="." instance=ExtResource( 1 )]
+timeline = "timeline-1643227367.json"
 
 [node name="Ambiente" parent="." instance=ExtResource( 2 )]
 

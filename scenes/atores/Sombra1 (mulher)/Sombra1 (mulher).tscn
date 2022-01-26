@@ -73,9 +73,11 @@ tracks/1/keys = {
 script = ExtResource( 20 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 scale = Vector2( 7, 7 )
 frames = SubResource( 1 )
 animation = "pondo_mascara"
 
 [node name="fade_in" type="AnimationPlayer" parent="."]
+autoplay = "fade_in"
 anims/fade_in = SubResource( 2 )
