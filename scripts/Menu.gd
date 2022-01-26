@@ -29,7 +29,7 @@ func _on_slot1_button_up():
 		file.store_var(data)
 		file.close()
 	
-	SceneChanger.change_scene("res://scenes/zone test.tscn", "fade",data.weapon_position,save_path1)
+	SceneChanger.change_scene("res://scenes/fases/inicio_do_jogo.tscn", "fade",data.weapon_position,save_path1)
 
 func _on_slot2_button_up():
 	var data = {
