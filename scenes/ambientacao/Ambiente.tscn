@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/ambientacao/luz.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/ambientacao/fundo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/ambientacao/Mesa_principal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/ambientacao/Mesa.tscn" type="PackedScene" id=4]
+
+[node name="Ambiente" type="Node2D"]
+
+[node name="fundo" parent="." instance=ExtResource( 2 )]
+position = Vector2( 973, 543 )
+
+[node name="luz" parent="." instance=ExtResource( 1 )]
+position = Vector2( 354, 542 )
+
+[node name="Mesa" parent="." instance=ExtResource( 4 )]
+position = Vector2( 357, 542 )
+
+[node name="mesa_principal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1305, 543 )

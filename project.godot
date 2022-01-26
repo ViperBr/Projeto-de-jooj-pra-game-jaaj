@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Projeto-de-jooj-pra-game-jaaj"
-run/main_scene="res://scenes/Menu.tscn"
+run/main_scene="res://scenes/ambientacao/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

@@ -1,0 +1,63 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 8
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Realmente era uma época boa e despreocupada, certo ?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Antes dos confrontos, antes das guerras e das terras era apenas paz."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Eu apenas me preocupava apenas em ser o melhor filho que eu podia para minha mãe."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A infância é realmente um tempo que deixamos passar com facilidade e apesar de não ser dos melhores nós sempre nos lembramos dele como um grande marco sem volta onde deixamos de fazer muitas coisas, mas os erros não são além de uma construção do nosso futuro eu?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Opções:"
+		},
+		{
+			"choice": "Dizer: \"Eu posso parar com esse jogo quando eu quiser?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Não falar nada e olhar um pouco a arma",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1643227367.json",
+		"name": "inicio_do_jogo"
+	}
+}

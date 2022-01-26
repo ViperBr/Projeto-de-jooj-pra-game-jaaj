@@ -1,19 +1,19 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://fonts/VT323-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://scripts/Menu.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
+[ext_resource path="res://fonts/VT323-Regular.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="Theme" id=1]
 
 [sub_resource type="DynamicFont" id=2]
 size = 128
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="Theme" id=3]
 
 [sub_resource type="DynamicFont" id=4]
 size = 32
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="Theme" id=9]
 
@@ -21,18 +21,18 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 32
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="Theme" id=7]
 
 [sub_resource type="DynamicFont" id=8]
 size = 24
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
