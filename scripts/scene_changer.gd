@@ -7,7 +7,7 @@ var scene : String;
 var data 
 var path
 
-func change_scene(new_scene, anim, data=Vector2(62,278), savepath="user://saves/save1.dat"):
+func change_scene(new_scene, anim="fade", data=Vector2(850,278), savepath="user://saves/save1.dat"):
 	scene = new_scene
 	animation.play(anim)
 	data = data

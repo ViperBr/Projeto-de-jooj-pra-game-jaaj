@@ -1,0 +1,39 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "só para fins de teste mesmo"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "nada em especial"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "save_state",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 2
+		},
+		{
+			"change_timeline": "timeline-1643319595.json",
+			"event_id": "dialogic_020"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1643319585.json",
+		"name": "inicio_do_jogo2"
+	}
+}

@@ -80,6 +80,9 @@ texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 11 )
 texture_focused = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="loadGame" type="TextureButton" parent="layerBase"]
 margin_left = 248.0

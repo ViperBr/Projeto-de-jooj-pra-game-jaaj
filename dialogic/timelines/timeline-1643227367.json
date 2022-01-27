@@ -29,7 +29,7 @@
 			"text": "A infância é realmente um tempo que deixamos passar com facilidade e apesar de não ser dos melhores nós sempre nos lembramos dele como um grande marco sem volta onde deixamos de fazer muitas coisas, mas os erros não são além de uma construção do nosso futuro eu?"
 		},
 		{
-			"character": "",
+			"character": "character-1643321552.json",
 			"event_id": "dialogic_010",
 			"options": [
 
@@ -45,6 +45,16 @@
 			"value": ""
 		},
 		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "can_i",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"choice": "Não falar nada e olhar um pouco a arma",
 			"condition": "",
 			"definition": "",
@@ -52,12 +62,36 @@
 			"value": ""
 		},
 		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Te aguardo "
+		},
+		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "save_state",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 2
+		},
+		{
+			"change_timeline": "timeline-1643319585.json",
+			"event_id": "dialogic_020"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.3",
 		"file": "timeline-1643227367.json",
-		"name": "inicio_do_jogo"
+		"name": "inicio_do_jogo1"
 	}
 }

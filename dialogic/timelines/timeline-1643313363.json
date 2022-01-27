@@ -1,0 +1,35 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 2
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Há algum tempo quero te mostrar um jogo e você terá que jogar e só vamos parar quando meu nome eu contar."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "E é claro foi um prazer te conhecer, afinal você foi um belo amigo."
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "change_scene",
+				"target_node_path": "CanvasLayer"
+			},
+			"event_id": "dialogic_042"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1643313363.json",
+		"name": "prologue"
+	}
+}
