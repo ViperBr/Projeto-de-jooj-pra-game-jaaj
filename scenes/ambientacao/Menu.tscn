@@ -1,10 +1,19 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://fonts/VT323-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://sprites/interface/Iniciar_jogo.png" type="Texture" id=3]
-[ext_resource path="res://sprites/interface/Iniciar_jogo_click.png" type="Texture" id=4]
-[ext_resource path="res://sprites/interface/Iniciar_jogo_mouse.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Botoes Menu/botao sair/sair mouse.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Botoes Menu/Botao opcoes/botao opcoes mouse.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Botoes Menu/Botao carregar/carregar idle.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Botoes Menu/botao sair/sair click.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Botoes Menu/botao iniciar/botao iniciar click.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Botoes Menu/botao sair/sair idle.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Botoes Menu/Botao opcoes/botao opcoes click.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Botoes Menu/Botao carregar/botao carregar click.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Botoes Menu/botao iniciar/botao iniciar mouse.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Botoes Menu/Botao opcoes/botao opcoes idle.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Botoes Menu/Botao carregar/botao carregar mouse.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Botoes Menu/botao iniciar/botao iniciar idle.png" type="Texture" id=14]
 
 [sub_resource type="Theme" id=1]
 
@@ -13,10 +22,6 @@ size = 128
 font_data = ExtResource( 2 )
 
 [sub_resource type="Theme" id=3]
-
-[sub_resource type="DynamicFont" id=4]
-size = 32
-font_data = ExtResource( 2 )
 
 [sub_resource type="Theme" id=9]
 
@@ -30,6 +35,10 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
 font_data = ExtResource( 2 )
 
 [node name="Menu" type="Control"]
@@ -61,46 +70,52 @@ __meta__ = {
 }
 
 [node name="newGame" type="TextureButton" parent="layerBase"]
-margin_left = 248.0
-margin_top = 448.0
-rect_scale = Vector2( 0.1, 0.1 )
-hint_tooltip = "novo jogo"
+margin_left = 248.004
+margin_top = 299.0
+margin_right = 748.004
+margin_bottom = 549.0
+rect_scale = Vector2( 0.5, 0.5 )
 theme = SubResource( 3 )
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
-texture_focused = ExtResource( 5 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 11 )
+texture_focused = ExtResource( 11 )
 
 [node name="loadGame" type="TextureButton" parent="layerBase"]
 margin_left = 248.0
-margin_top = 512.0
-margin_right = 510.0
-margin_bottom = 551.0
+margin_top = 429.0
+margin_right = 748.0
+margin_bottom = 679.001
+rect_scale = Vector2( 0.5, 0.5 )
 theme = SubResource( 3 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 13 )
+texture_focused = ExtResource( 13 )
 
-[node name="settings" type="Button" parent="layerBase"]
+[node name="settings" type="TextureButton" parent="layerBase"]
 margin_left = 248.0
-margin_top = 576.0
-margin_right = 510.0
-margin_bottom = 615.0
+margin_top = 555.0
+margin_right = 748.0
+margin_bottom = 805.0
+rect_scale = Vector2( 0.5, 0.5 )
 theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "configurações"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 4 )
+texture_focused = ExtResource( 4 )
 
-[node name="exit" type="Button" parent="layerBase"]
+[node name="exit" type="TextureButton" parent="layerBase"]
 margin_left = 248.0
-margin_top = 645.0
-margin_right = 510.0
-margin_bottom = 684.0
+margin_top = 691.901
+margin_right = 748.0
+margin_bottom = 941.901
+rect_scale = Vector2( 0.5, 0.5 )
 theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "sair"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 3 )
+texture_focused = ExtResource( 3 )
 
 [node name="confirm" type="ColorRect" parent="layerBase"]
 visible = false
