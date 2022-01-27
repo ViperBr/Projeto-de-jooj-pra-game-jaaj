@@ -1,7 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://fonts/VT323-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprites/interface/Iniciar_jogo.png" type="Texture" id=3]
+[ext_resource path="res://sprites/interface/Iniciar_jogo_click.png" type="Texture" id=4]
+[ext_resource path="res://sprites/interface/Iniciar_jogo_mouse.png" type="Texture" id=5]
 
 [sub_resource type="Theme" id=1]
 
@@ -57,29 +60,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="newGame" type="Button" parent="layerBase"]
+[node name="newGame" type="TextureButton" parent="layerBase"]
 margin_left = 248.0
 margin_top = 448.0
-margin_right = 510.0
-margin_bottom = 487.0
+rect_scale = Vector2( 0.1, 0.1 )
+hint_tooltip = "novo jogo"
 theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "iniciar jogo"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_focused = ExtResource( 5 )
 
-[node name="loadGame" type="Button" parent="layerBase"]
+[node name="loadGame" type="TextureButton" parent="layerBase"]
 margin_left = 248.0
 margin_top = 512.0
 margin_right = 510.0
 margin_bottom = 551.0
 theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "carregar jogo"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="settings" type="Button" parent="layerBase"]
 margin_left = 248.0
