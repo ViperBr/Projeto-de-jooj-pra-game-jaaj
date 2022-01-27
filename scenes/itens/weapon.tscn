@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scripts/draged.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Revolver1.png" type="Texture" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://sprites/tambor_arma.png" type="Texture" id=4]
+[ext_resource path="res://sprites/seta.png" type="Texture" id=5]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
@@ -28,37 +30,102 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[sub_resource type="AtlasTexture" id=5]
-flags = 4
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 64, 64 )
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 4 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 4 )
+region = Rect2( 384, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 4 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 4 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=22]
 animations = [ {
-"frames": [ SubResource( 5 ) ],
+"frames": [ SubResource( 11 ) ],
 "loop": true,
-"name": "default",
+"name": "1bullet",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 12 ) ],
+"loop": true,
+"name": "5bullets",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ) ],
+"loop": true,
+"name": "0bullets",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ) ],
+"loop": true,
+"name": "4bullets",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "6bullets",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ) ],
+"loop": true,
+"name": "3bullets",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 17 ) ],
+"loop": true,
+"name": "2bullets",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 6.475, 31.4286 )
+[sub_resource type="CircleShape2D" id=23]
+radius = 9.05539
 
-[sub_resource type="AtlasTexture" id=8]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 64, 64 )
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 5 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=24]
 animations = [ {
-"frames": [ SubResource( 8 ) ],
+"frames": [ SubResource( 19 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 20 ), SubResource( 21 ), SubResource( 20 ) ],
+"loop": true,
+"name": "clicked",
+"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 32, 32 )
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 10, 4.0335 )
 
 [node name="weapon" type="Node2D"]
 script = ExtResource( 1 )
@@ -75,45 +142,64 @@ scale = Vector2( 3.12, 3.16 )
 shape = SubResource( 1 )
 
 [node name="selector" type="AnimatedSprite" parent="."]
-scale = Vector2( 15, 7 )
-frames = SubResource( 6 )
+scale = Vector2( 7, 7 )
+frames = SubResource( 22 )
+animation = "1bullet"
 
-[node name="Area10" type="Area2D" parent="selector"]
+[node name="bullet1" type="Area2D" parent="selector"]
+position = Vector2( -18.111, 10.266 )
 
-[node name="col_10_1" type="CollisionShape2D" parent="selector/Area10"]
-position = Vector2( -25.7, 0 )
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="selector/bullet1"]
+rotation = 1.09607
+shape = SubResource( 23 )
 
-[node name="col_10_2" type="CollisionShape2D" parent="selector/Area10"]
-position = Vector2( 26, 0 )
-shape = SubResource( 7 )
+[node name="bullet2" type="Area2D" parent="selector"]
+position = Vector2( 0.073, 21.576 )
 
-[node name="Area40" type="Area2D" parent="selector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="selector/bullet2"]
+rotation = 1.09607
+shape = SubResource( 23 )
 
-[node name="col_40_1" type="CollisionShape2D" parent="selector/Area40"]
-position = Vector2( -12.8, 0.142857 )
-shape = SubResource( 7 )
+[node name="bullet3" type="Area2D" parent="selector"]
+position = Vector2( 18.111, 10.266 )
 
-[node name="col_40_2" type="CollisionShape2D" parent="selector/Area40"]
-position = Vector2( 13.1333, -0.142857 )
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="selector/bullet3"]
+rotation = 1.09607
+shape = SubResource( 23 )
 
-[node name="Area50" type="Area2D" parent="selector"]
+[node name="bullet4" type="Area2D" parent="selector"]
+position = Vector2( 18.1429, -10 )
 
-[node name="col_50_1" type="CollisionShape2D" parent="selector/Area50"]
-position = Vector2( 0.0666667, 0 )
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="selector/bullet4"]
+rotation = 1.09607
+shape = SubResource( 23 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="selector"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -31, 0 )
-scale = Vector2( 0.03125, 1 )
-frames = SubResource( 9 )
+[node name="bullet5" type="Area2D" parent="selector"]
+position = Vector2( 0.142856, -21 )
 
-[node name="Area2D" type="Area2D" parent="selector/AnimatedSprite"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="selector/bullet5"]
+rotation = 1.09607
+shape = SubResource( 23 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="selector/AnimatedSprite/Area2D"]
-scale = Vector2( 1, 1 )
-shape = SubResource( 10 )
+[node name="bullet6" type="Area2D" parent="selector"]
+position = Vector2( -17.7143, -10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="selector/bullet6"]
+rotation = 1.09607
+shape = SubResource( 23 )
+
+[node name="arrow" type="AnimatedSprite" parent="."]
+position = Vector2( 3, 326 )
+scale = Vector2( 10, 10 )
+frames = SubResource( 24 )
+playing = true
+
+[node name="Area2D" type="Area2D" parent="arrow"]
+scale = Vector2( 0.1, 0.1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arrow/Area2D"]
+position = Vector2( 0, -136 )
+scale = Vector2( 4.77, 19.586 )
+shape = SubResource( 25 )
 
 [connection signal="input_event" from="Sprite/Area2D" to="." method="_on_Area2D_input_event"]
