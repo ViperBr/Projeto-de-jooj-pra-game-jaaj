@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/itens/weapon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ambientacao/Ambiente.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/atores/Sombra1 (mulher)/Sombra1 (mulher).tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/ambientacao/Mesa.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/game.gd" type="Script" id=5]
+[ext_resource path="res://scenes/itens/notebook.tscn" type="PackedScene" id=6]
 
 [node name="inicio_do_jogo" type="Node"]
 script = ExtResource( 5 )
@@ -18,4 +19,7 @@ position = Vector2( 356, 560 )
 position = Vector2( 357, 542 )
 
 [node name="Weapon" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1341, 563 )
+position = Vector2( 1197, 588 )
+
+[node name="notebook" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1615, 670 )

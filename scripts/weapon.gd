@@ -51,8 +51,6 @@ func _process(delta):
 	if not selected and not VariableSingleton.is_weapon_on_table:
 		global_position = lerp(global_position,initial_position, 5 * delta)
 		
-	print(initial_position)
-		
 		
 #	else:
 #		if taked_weapon:
