@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node
 
 var file
 var data

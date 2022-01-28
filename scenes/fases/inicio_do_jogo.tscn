@@ -1,32 +1,21 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/itens/weapon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ambientacao/Ambiente.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/atores/Sombra1 (mulher)/Sombra1 (mulher).tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/ambientacao/Mesa.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/game.gd" type="Script" id=5]
-[ext_resource path="res://scenes/rest_position.tscn" type="PackedScene" id=6]
 
-[node name="inicio_do_jogo" type="CanvasLayer"]
+[node name="inicio_do_jogo" type="Node"]
 script = ExtResource( 5 )
 
 [node name="Ambiente" parent="." instance=ExtResource( 2 )]
 
 [node name="sombra1" parent="." instance=ExtResource( 3 )]
-position = Vector2( 332, 542 )
+position = Vector2( 356, 560 )
 
 [node name="Mesa" parent="." instance=ExtResource( 4 )]
 position = Vector2( 357, 542 )
 
-[node name="Control" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="rest" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1667, 414 )
-
-[node name="weapon" parent="." instance=ExtResource( 1 )]
-position = Vector2( 924, 413 )
+[node name="Weapon" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1333, 480 )

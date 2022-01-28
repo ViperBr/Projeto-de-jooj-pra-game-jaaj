@@ -8,7 +8,6 @@ var rest_nodes = []
 var data
 
 func _ready():
-	$arrow.hide()
 	$selector.hide()
 	path = SceneChanger.path	
 	rest_nodes = get_tree().get_nodes_in_group("zone")
