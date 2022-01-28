@@ -16,10 +16,6 @@ func _ready():
 	add_child(new_dialog,true)
 	pass 
 
-func can_i():
-	print_debug("chega aqui")
-	$"Sombra1 (mulher)".can_i()
-
 func save_state():
 	if data.dialog < 3:
 		data.dialog += 1

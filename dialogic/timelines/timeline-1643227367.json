@@ -50,7 +50,7 @@
 
 				],
 				"method_name": "can_i",
-				"target_node_path": "inicio_do_jogo"
+				"target_node_path": "inicio_do_jogo/sombra1"
 			},
 			"event_id": "dialogic_042"
 		},
@@ -68,6 +68,10 @@
 			"text": "Te aguardo "
 		},
 		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 2
+		},
+		{
 			"event_id": "dialogic_013"
 		},
 		{
@@ -83,10 +87,6 @@
 		{
 			"event_id": "dialogic_023",
 			"wait_seconds": 2
-		},
-		{
-			"change_timeline": "timeline-1643319585.json",
-			"event_id": "dialogic_020"
 		}
 	],
 	"metadata": {
