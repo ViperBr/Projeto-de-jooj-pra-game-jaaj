@@ -20,11 +20,14 @@ var data
 #			file.close()
 #
 
+
+onready var my_turn:bool
 onready var initial_position
 const SPEED = 25
 
 
 func _ready():
+	my_turn = false
 	initial_position = position
 
 func _on_Weapon_input_event(viewport, event, shape_idx):
@@ -34,8 +37,10 @@ func _on_Weapon_input_event(viewport, event, shape_idx):
 		selected = false
 
 func _process(delta):
-	
-	print(VariableSingleton.is_weapon_on_table	)
+	if my_turn:
+		$AnimatedSprite.play("up")
+	else:
+		$AnimatedSprite.play("down")
 	
 	if selected: #and VariableSingleton.is_weapon_on_table:
 		global_position = lerp(global_position, get_global_mouse_position(), SPEED * delta);
@@ -44,20 +49,9 @@ func _process(delta):
 		return
 	
 	if not selected and not VariableSingleton.is_weapon_on_table:
-		global_position = lerp(global_position,initial_position, SPEED * delta)
-		#move_to(position,initial_position,SPEED*delta)
-	
-func move_to(current,to,steps):
-	current = lerp(current,to,steps)
-	
+		global_position = lerp(global_position,initial_position, 5 * delta)
 		
-		
-		
-		
-		
-		
-		
-		
+	print(initial_position)
 		
 		
 #	else:
