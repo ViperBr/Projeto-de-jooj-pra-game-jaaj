@@ -42,45 +42,44 @@ func _process(delta):
 		global_position = lerp(global_position, rest_point, 10 * delta)
 
 func _input(event):
-	#if event is InputEventMouseButton:
-	#	if event.button_index == BUTTON_LEFT and not event.pressed:
-	#		
-	#		selected = false
-	#		var shortest_dist = 100
-	#		for child in rest_nodes:
-	#			var distance = global_position.distance_to(child.global_position)
-	#			
-	#			if distance <= shortest_dist and child.name == "get_weapon":
-	#				taked_weapon = true;
-	#				rest_point = child.global_position
-#	#				child.select()
-	#				data.weapon_position = rest_point
-	#				var file = File.new()
-	#				file.open(path ,File.WRITE)
-	#				file.store_var(data)
-	#				file.close()
-	#				return
-	#			elif distance <= shortest_dist:
-	#				rest_point = child.global_position
-#	#				child.select()
-	#				data.weapon_position = rest_point
-	#				var file = File.new()
-	#				file.open(path ,File.WRITE)
-	#				file.store_var(data)
-	#				file.close()
-	#				return
-	#			else:
-	#				if taked_weapon:
-	#					if $selector/Area10.overlaps_area($selector/AnimatedSprite/Area2D):
-	#						$selector/AnimatedSprite.modulate = Color.brown
-	#					if $selector/Area40.overlaps_area($selector/AnimatedSprite/Area2D):
-	#						$selector/AnimatedSprite.modulate = Color.aqua
-	#					if $selector/Area50.overlaps_area($selector/AnimatedSprite/Area2D):
-	#						$selector/AnimatedSprite.modulate = Color.gold
-	#				rest_point = global_position
-	#				data.weapon_position = rest_point
-	#				var file = File.new()
-	#				file.open(path ,File.WRITE)
-	#				file.store_var(data)
-	#				file.close()
-	pass
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and not event.pressed:
+			
+			selected = false
+			var shortest_dist = 100
+			for child in rest_nodes:
+				var distance = global_position.distance_to(child.global_position)
+				
+				if distance <= shortest_dist and child.name == "get_weapon":
+					taked_weapon = true;
+					rest_point = child.global_position
+					child.select()
+					data.weapon_position = rest_point
+					var file = File.new()
+					file.open(path ,File.WRITE)
+					file.store_var(data)
+					file.close()
+					return
+				elif distance <= shortest_dist:
+					rest_point = child.global_position
+					child.select()
+					data.weapon_position = rest_point
+					var file = File.new()
+					file.open(path ,File.WRITE)
+					file.store_var(data)
+					file.close()
+					return
+				else:
+					if taked_weapon:
+						if $selector/Area10.overlaps_area($selector/AnimatedSprite/Area2D):
+							$selector/AnimatedSprite.modulate = Color.brown
+						if $selector/Area40.overlaps_area($selector/AnimatedSprite/Area2D):
+							$selector/AnimatedSprite.modulate = Color.aqua
+						if $selector/Area50.overlaps_area($selector/AnimatedSprite/Area2D):
+							$selector/AnimatedSprite.modulate = Color.gold
+					rest_point = global_position
+					data.weapon_position = rest_point
+					var file = File.new()
+					file.open(path ,File.WRITE)
+					file.store_var(data)
+					file.close()
