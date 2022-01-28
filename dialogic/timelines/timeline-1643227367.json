@@ -2,7 +2,7 @@
 	"events": [
 		{
 			"event_id": "dialogic_023",
-			"wait_seconds": 8
+			"wait_seconds": 10
 		},
 		{
 			"character": "",
