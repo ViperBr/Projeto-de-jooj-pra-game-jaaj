@@ -115,19 +115,19 @@ func _on_loadGame_button_up():
 		file.open(save_path1,File.READ)
 		var player_data = file.get_var()
 		if player_data.date:
-			$layerLoadGame/save1.set_text(player_data.date)
+			$layerLoadGame/save1/Label.set_text(player_data.date)
 		file.close()
 	if file.file_exists(save_path2):
 		file.open(save_path2,File.READ)
 		var player_data = file.get_var()
 		if player_data.date:
-			$layerLoadGame/save2.text = player_data.date
+			$layerLoadGame/save2/Label.text = player_data.date
 		file.close()
 	if file.file_exists(save_path3):
 		file.open(save_path3,File.READ)
 		var player_data = file.get_var()
 		if player_data.date:
-			$layerLoadGame/save3.text = player_data.date
+			$layerLoadGame/save3/Label.text = player_data.date
 		file.close()
 	pass # Replace with function body.
 

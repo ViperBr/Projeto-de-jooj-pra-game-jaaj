@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://fonts/VT323-Regular.ttf" type="DynamicFontData" id=2]
@@ -14,6 +14,10 @@
 [ext_resource path="res://sprites/Botoes Menu/Botao opcoes/botao opcoes idle.png" type="Texture" id=12]
 [ext_resource path="res://sprites/Botoes Menu/Botao carregar/botao carregar mouse.png" type="Texture" id=13]
 [ext_resource path="res://sprites/Botoes Menu/botao iniciar/botao iniciar idle.png" type="Texture" id=14]
+[ext_resource path="res://Fonts/VT323-Regular.ttf" type="DynamicFontData" id=18]
+[ext_resource path="res://sprites/interface/Iniciar_jogo_mouse.png" type="Texture" id=19]
+[ext_resource path="res://sprites/interface/Iniciar_jogo_click.png" type="Texture" id=20]
+[ext_resource path="res://sprites/interface/Iniciar_jogo.png" type="Texture" id=21]
 
 [sub_resource type="Theme" id=1]
 
@@ -28,18 +32,46 @@ font_data = ExtResource( 2 )
 [sub_resource type="Theme" id=5]
 
 [sub_resource type="DynamicFont" id=6]
-size = 32
+size = 73
 font_data = ExtResource( 2 )
 
 [sub_resource type="Theme" id=7]
 
-[sub_resource type="DynamicFont" id=8]
-size = 24
-font_data = ExtResource( 2 )
+[sub_resource type="DynamicFont" id=18]
+size = 432
+font_data = ExtResource( 18 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 32
-font_data = ExtResource( 2 )
+[sub_resource type="DynamicFont" id=19]
+size = 412
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 271
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 271
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 440
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 446
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 378
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 233
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 457
+font_data = ExtResource( 18 )
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -76,10 +108,11 @@ margin_right = 748.004
 margin_bottom = 549.0
 rect_scale = Vector2( 0.5, 0.5 )
 theme = SubResource( 3 )
+action_mode = 0
 texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 11 )
-texture_focused = ExtResource( 11 )
+texture_focused = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -94,7 +127,7 @@ theme = SubResource( 3 )
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 10 )
 texture_hover = ExtResource( 13 )
-texture_focused = ExtResource( 13 )
+texture_focused = ExtResource( 10 )
 
 [node name="settings" type="TextureButton" parent="layerBase"]
 margin_left = 248.0
@@ -106,7 +139,7 @@ theme = SubResource( 3 )
 texture_normal = ExtResource( 12 )
 texture_pressed = ExtResource( 9 )
 texture_hover = ExtResource( 4 )
-texture_focused = ExtResource( 4 )
+texture_focused = ExtResource( 9 )
 
 [node name="exit" type="TextureButton" parent="layerBase"]
 margin_left = 248.0
@@ -118,7 +151,7 @@ theme = SubResource( 3 )
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 3 )
-texture_focused = ExtResource( 3 )
+texture_focused = ExtResource( 6 )
 
 [node name="confirm" type="ColorRect" parent="layerBase"]
 visible = false
@@ -146,27 +179,40 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -130.5
-margin_top = -52.0
-margin_right = 130.5
-margin_bottom = 24.0
+margin_left = -290.0
+margin_top = -121.0
+margin_right = 290.0
+margin_bottom = -45.0
 theme = SubResource( 5 )
 custom_fonts/font = SubResource( 6 )
 text = "deseja sair do jogo?"
 
-[node name="dont" type="Button" parent="layerBase/confirm/WindowDialog"]
+[node name="dont" type="TextureButton" parent="layerBase/confirm/WindowDialog"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 12.0
+margin_left = 57.0005
 margin_top = -54.0
-margin_right = 88.0
+margin_right = 2677.0
+margin_bottom = 336.0
+rect_scale = Vector2( 0.083, 0.162 )
 theme = SubResource( 7 )
-custom_fonts/font = SubResource( 8 )
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_focused = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="layerBase/confirm/WindowDialog/dont"]
+margin_left = 662.646
+margin_right = 1181.65
+margin_bottom = 433.0
+rect_scale = Vector2( 2.386, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 18 )
 text = "Não"
 
-[node name="confirmexit" type="Button" parent="layerBase/confirm/WindowDialog"]
+[node name="confirmexit" type="TextureButton" parent="layerBase/confirm/WindowDialog"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -174,14 +220,24 @@ anchor_bottom = 1.0
 margin_left = -88.0
 margin_top = -54.0
 margin_right = -12.0
+rect_scale = Vector2( -0.083, 0.162 )
 theme = SubResource( 7 )
-custom_fonts/font = SubResource( 8 )
-text = "sim"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_focused = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="layerBase/confirm/WindowDialog/confirmexit"]
+margin_left = 1867.47
+margin_right = 2362.47
+margin_bottom = 413.0
+rect_scale = Vector2( -2.354, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 19 )
+text = "Sim"
 
 [node name="layerNewGame" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
@@ -190,9 +246,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="layerNewGame"]
-margin_left = 776.0
+margin_left = 757.0
 margin_top = 48.0
-margin_right = 1235.0
+margin_right = 1216.0
 margin_bottom = 177.0
 theme = SubResource( 1 )
 custom_fonts/font = SubResource( 2 )
@@ -201,53 +257,117 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="slot1" type="Button" parent="layerNewGame"]
+[node name="slot1" type="TextureButton" parent="layerNewGame"]
 margin_left = 568.0
-margin_top = 296.0
-margin_right = 1385.0
-margin_bottom = 335.0
+margin_top = 259.0
+margin_right = 3188.0
+margin_bottom = 649.0
+rect_scale = Vector2( 0.324, 0.324 )
 theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "slot 1"
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="slot2" type="Button" parent="layerNewGame"]
+[node name="Label" type="Label" parent="layerNewGame/slot1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -324.0
+margin_top = -136.0
+margin_right = 324.0
+margin_bottom = 136.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "Slot 1"
+
+[node name="slot2" type="TextureButton" parent="layerNewGame"]
 margin_left = 568.0
-margin_top = 360.0
-margin_right = 1385.0
-margin_bottom = 399.0
+margin_top = 451.0
+margin_right = 3188.0
+margin_bottom = 841.0
+rect_scale = Vector2( 0.324, 0.324 )
 theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "slot 2"
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="slot3" type="Button" parent="layerNewGame"]
-margin_left = 568.0
-margin_top = 424.0
-margin_right = 1385.0
-margin_bottom = 463.0
-theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "slot 3"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Label" type="Label" parent="layerNewGame/slot2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -324.0
+margin_top = -136.0
+margin_right = 324.0
+margin_bottom = 136.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "Slot 2"
 
-[node name="back" type="Button" parent="layerNewGame"]
-margin_left = 224.0
+[node name="slot3" type="TextureButton" parent="layerNewGame"]
+margin_left = 568.0
+margin_top = 651.0
+margin_right = 3188.0
+margin_bottom = 1041.0
+rect_scale = Vector2( 0.324, 0.324 )
+theme = SubResource( 3 )
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="layerNewGame/slot3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -324.0
+margin_top = -136.0
+margin_right = 324.0
+margin_bottom = 136.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Slot 3"
+
+[node name="back" type="TextureButton" parent="layerNewGame"]
+margin_left = 509.0
 margin_top = 848.0
-margin_right = 486.0
-margin_bottom = 887.0
+margin_right = 3129.0
+margin_bottom = 1238.0
+rect_scale = Vector2( -0.114, 0.113 )
 theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "voltar"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+action_mode = 0
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 19 )
+
+[node name="Label" type="Label" parent="layerNewGame/back"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 435.614
+margin_top = -220.0
+margin_right = 1491.61
+margin_bottom = 220.0
+rect_scale = Vector2( -1, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Voltar"
 
 [node name="sure" type="ColorRect" parent="layerNewGame"]
 visible = false
@@ -273,36 +393,61 @@ theme = SubResource( 5 )
 custom_fonts/font = SubResource( 6 )
 text = "deseja excluir o save antigo?"
 
-[node name="dont" type="Button" parent="layerNewGame/sure"]
+[node name="dont" type="TextureButton" parent="layerNewGame/sure"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 12.0
+margin_left = 154.0
 margin_top = -507.568
-margin_right = 88.0
-margin_bottom = -453.568
+margin_right = 2774.0
+margin_bottom = -117.568
+rect_scale = Vector2( -0.041, 0.146 )
 theme = SubResource( 7 )
-custom_fonts/font = SubResource( 8 )
-text = "Não"
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 19 )
 
-[node name="confirmexit" type="Button" parent="layerNewGame/sure"]
+[node name="Label" type="Label" parent="layerNewGame/sure/dont"]
+margin_left = 2390.25
+margin_top = -50.9075
+margin_right = 2924.25
+margin_bottom = 396.093
+rect_scale = Vector2( -4.187, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "não"
+
+[node name="confirmexit" type="TextureButton" parent="layerNewGame/sure"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -88.0
+margin_left = -153.0
 margin_top = -507.568
-margin_right = -12.0
-margin_bottom = -453.568
+margin_right = 2467.0
+margin_bottom = -117.568
+rect_scale = Vector2( 0.041, 0.146 )
 theme = SubResource( 7 )
-custom_fonts/font = SubResource( 8 )
-text = "sim"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 19 )
+
+[node name="Label" type="Label" parent="layerNewGame/sure/confirmexit"]
+margin_left = 195.123
+margin_right = 648.123
+margin_bottom = 379.0
+rect_scale = Vector2( 4.87, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Sim"
 
 [node name="layerLoadGame" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
@@ -322,53 +467,120 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="save1" type="Button" parent="layerLoadGame"]
+[node name="save1" type="TextureButton" parent="layerLoadGame"]
 margin_left = 600.0
 margin_top = 312.0
 margin_right = 1417.0
 margin_bottom = 351.0
+rect_scale = Vector2( 0.313, 0.312 )
 theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "save 1"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 20 )
 
-[node name="save2" type="Button" parent="layerLoadGame"]
+[node name="Label" type="Label" parent="layerLoadGame/save1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -279.0
+margin_top = -117.0
+margin_right = 279.0
+margin_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Save 1"
+
+[node name="save2" type="TextureButton" parent="layerLoadGame"]
 margin_left = 600.0
-margin_top = 376.0
-margin_right = 1417.0
-margin_bottom = 415.0
+margin_top = 472.0
+margin_right = 3220.0
+margin_bottom = 862.0
+rect_scale = Vector2( 0.313, 0.313 )
 theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "save 2"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 20 )
 
-[node name="save3" type="Button" parent="layerLoadGame"]
+[node name="Label" type="Label" parent="layerLoadGame/save2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -279.0
+margin_top = -117.0
+margin_right = 279.0
+margin_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Save 2"
+
+[node name="save3" type="TextureButton" parent="layerLoadGame"]
 margin_left = 600.0
-margin_top = 440.0
-margin_right = 1417.0
-margin_bottom = 479.0
+margin_top = 637.0
+margin_right = 3220.0
+margin_bottom = 1027.0
+rect_scale = Vector2( 0.313, 0.313 )
 theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "save 3"
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="layerLoadGame/save3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -279.0
+margin_top = -117.0
+margin_right = 279.0
+margin_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Save 3"
+
+[node name="back" type="TextureButton" parent="layerLoadGame"]
+margin_left = 509.0
+margin_top = 848.0
+margin_right = 3129.0
+margin_bottom = 1238.0
+rect_scale = Vector2( -0.114, 0.113 )
+theme = SubResource( 3 )
+action_mode = 0
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 19 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="back" type="Button" parent="layerLoadGame"]
-margin_left = 248.0
-margin_top = 856.0
-margin_right = 510.0
-margin_bottom = 895.0
-theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "voltar"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Label" type="Label" parent="layerLoadGame/back"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 435.614
+margin_top = -220.0
+margin_right = 1491.61
+margin_bottom = 220.0
+rect_scale = Vector2( -1, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Voltar"
 
 [node name="error" type="ColorRect" parent="layerLoadGame"]
 visible = false
@@ -384,28 +596,49 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -182.0
-margin_top = -38.0
-margin_right = 182.0
-margin_bottom = 38.0
+margin_left = -406.0
+margin_top = -101.0
+margin_right = 406.0
+margin_bottom = -25.0
 theme = SubResource( 5 )
 custom_fonts/font = SubResource( 6 )
 text = "erro: nenhum save encontrado"
 
-[node name="ok" type="Button" parent="layerLoadGame/error"]
+[node name="ok" type="TextureButton" parent="layerLoadGame/error"]
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -38.0
-margin_top = -267.568
-margin_right = 38.0
-margin_bottom = -213.568
+anchor_bottom = 0.5
+margin_left = -113.0
+margin_top = 77.0
+margin_right = 2507.0
+margin_bottom = 467.0
+rect_scale = Vector2( 0.079, 0.153 )
 theme = SubResource( 7 )
-custom_fonts/font = SubResource( 8 )
-text = "ok"
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="layerLoadGame/error/ok"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -474.558
+margin_top = -229.0
+margin_right = -108.558
+margin_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 2.652, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 17 )
+text = "Ok"
 
 [node name="layerConfigs" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
@@ -428,17 +661,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="back" type="Button" parent="layerConfigs"]
-margin_left = 112.0
-margin_top = 936.0
-margin_right = 374.0
-margin_bottom = 975.0
+[node name="back" type="TextureButton" parent="layerConfigs"]
+margin_left = 509.0
+margin_top = 848.0
+margin_right = 3129.0
+margin_bottom = 1238.0
+rect_scale = Vector2( -0.114, 0.113 )
 theme = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "voltar"
+action_mode = 0
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 20 )
+texture_focused = ExtResource( 19 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="layerConfigs/back"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 435.614
+margin_top = -220.0
+margin_right = 1491.61
+margin_bottom = 220.0
+rect_scale = Vector2( -1, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 13 )
+text = "Voltar"
 
 [connection signal="button_up" from="layerBase/newGame" to="." method="_on_newGame_button_up"]
 [connection signal="button_up" from="layerBase/loadGame" to="." method="_on_loadGame_button_up"]
