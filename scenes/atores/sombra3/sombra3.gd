@@ -21,6 +21,7 @@ func _on_AnimatedSprite_animation_finished():
 			$AnimatedSprite.play("parado")
 			
 	if $AnimatedSprite.animation == "morre_3_balas":
+		get_node("/root/inicio_do_jogo").data.character += 1
 		get_node("/root/inicio_do_jogo").removing()
 		print_debug("chamando removing")
 		

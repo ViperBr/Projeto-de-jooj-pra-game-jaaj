@@ -9,6 +9,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Este foi seu melhor amigo certo ? Realmente o único ouvido que te escutou por muito tempo."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 3
 		}
 	],
 	"metadata": {

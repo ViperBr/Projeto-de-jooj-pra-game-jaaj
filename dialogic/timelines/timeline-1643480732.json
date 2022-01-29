@@ -19,6 +19,10 @@
 			"text": " Pare de olhar para mim como se eu fosse liberar o caminho, sou apenas um falso inimigo o arqui-inimigo da sua redenção apenas um reflexo do seus pecados."
 		},
 		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
 			"call_node": {
 				"arguments": [
 					"sombra4_pode_morrer"

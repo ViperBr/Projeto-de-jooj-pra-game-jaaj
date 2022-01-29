@@ -61,6 +61,13 @@ func set_sombra_shot():
 		get_node("/root/inicio_do_jogo").sombra_is_shooting()
 		set_weapon_bullets()
 		my_turn = true
+		var timer = Timer.new()
+		add_child(timer)
+		timer.set_wait_time(2)
+		timer.connect("timeout",self,"enable_sprite_visibility")
+		
+func enable_sprite_visibility():
+	$AnimatedSprite.visible = true
 
 func _on_Weapon_input_event(viewport, event, shape_idx):
 	if Input.is_action_pressed("click") and not taked_weapon:
@@ -75,17 +82,21 @@ func _process(delta):
 	
 	if my_turn:
 		$AnimatedSprite.play("up")
+		$AnimatedSprite.visible = true
+		
 	else:
 		$AnimatedSprite.play("down")
+		$AnimatedSprite.visible = false
 	
-	if selected: #and VariableSingleton.is_weapon_on_table:
-		global_position = lerp(global_position, get_global_mouse_position(), SPEED * delta);
+	if my_turn:
+		if selected: #and VariableSingleton.is_weapon_on_table:
+			global_position = lerp(global_position, get_global_mouse_position(), SPEED * delta);
 	
-	if selected and not VariableSingleton.is_weapon_on_table:
-		return
+		if selected and not VariableSingleton.is_weapon_on_table:
+			return
 	
-	if not selected and not VariableSingleton.is_weapon_on_table:
-		global_position = lerp(global_position,initial_position, 5 * delta)
+		if not selected and not VariableSingleton.is_weapon_on_table:
+			global_position = lerp(global_position,initial_position, 5 * delta)
 		
 		
 	if taked_weapon:
