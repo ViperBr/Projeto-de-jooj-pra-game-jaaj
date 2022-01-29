@@ -1,0 +1,23 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 4
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Este é um marco onde percebemos quem é o inimigo que mais simpatiza com nosso interior."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1643473851.json",
+		"name": "game_chara_3_fala_1"
+	}
+}

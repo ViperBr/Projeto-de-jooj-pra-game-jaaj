@@ -5,5 +5,3 @@ var is_notebook_opened:bool
 
 var character
 
-func _process(delta):
-	print(character)

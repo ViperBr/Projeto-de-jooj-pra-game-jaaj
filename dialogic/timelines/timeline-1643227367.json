@@ -2,7 +2,7 @@
 	"events": [
 		{
 			"event_id": "dialogic_023",
-			"wait_seconds": 12
+			"wait_seconds": 10
 		},
 		{
 			"character": "character-1643321552.json",

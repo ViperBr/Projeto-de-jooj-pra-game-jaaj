@@ -59,6 +59,7 @@ func skip_character():
 		data.dialog = 1
 		data.character += 1
 		save_state()
+		print("Character do data é : " + str(data.character))
 
 ##For TESTING ONLY, REMOVE THIS AFTER THE GAME IS DONE
 func _process(delta):

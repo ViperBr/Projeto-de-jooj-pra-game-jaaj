@@ -1,11 +1,12 @@
 extends Node2D
 
 
-var stopped_fade:bool=false
-
+onready var stopped_fade:bool=false
+onready var can_die:bool = false
 
 
 func _ready():
+	print_debug("Fui instanciado caraio")
 	$AnimatedSprite.play("sem_mascara")
 	$fade.play("fade")
 
@@ -17,11 +18,18 @@ func _on_AnimatedSprite_animation_finished():
 		$AnimatedSprite.play("parado")
 
 func set_animation_shooting():
-	set_animation_shooting_and_dead()
+	if can_die:
+		set_animation_shooting_and_dead()
+	else:
+		$AnimatedSprite.play("pondo_3_balas")
 
 func set_animation_shooting_and_dead():
-	$AnimatedSprite.play("atirando_morrendo")
+	$AnimatedSprite.play("morre_3_balas")
 	get_node("/root/inicio_do_jogo").removing()
 	
 func set_stopped_fade_to_true():
 	stopped_fade = true
+	
+	
+func sombra3_ultimo_dialogo():
+	can_die = true
