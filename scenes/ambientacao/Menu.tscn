@@ -249,6 +249,59 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="sure" type="ColorRect" parent="layerNewGame"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.541176 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="layerNewGame/sure"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.5
+margin_top = -52.0
+margin_right = 130.5
+margin_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "deseja excluir o save antigo?"
+
+[node name="dont" type="Button" parent="layerNewGame/sure"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = -507.568
+margin_right = 88.0
+margin_bottom = -453.568
+theme = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+text = "Não"
+
+[node name="confirmexit" type="Button" parent="layerNewGame/sure"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -88.0
+margin_top = -507.568
+margin_right = -12.0
+margin_bottom = -453.568
+theme = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+text = "sim"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="layerLoadGame" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -397,6 +450,8 @@ __meta__ = {
 [connection signal="button_up" from="layerNewGame/slot2" to="." method="_on_slot2_button_up"]
 [connection signal="button_up" from="layerNewGame/slot3" to="." method="_on_slot3_button_up"]
 [connection signal="button_up" from="layerNewGame/back" to="." method="_on_back_button_up"]
+[connection signal="button_up" from="layerNewGame/sure/dont" to="." method="_on_nao_button_up"]
+[connection signal="button_up" from="layerNewGame/sure/confirmexit" to="." method="_on_sim_button_up"]
 [connection signal="button_up" from="layerLoadGame/save1" to="." method="_on_save1_button_up"]
 [connection signal="button_up" from="layerLoadGame/save2" to="." method="_on_save2_button_up"]
 [connection signal="button_up" from="layerLoadGame/save3" to="." method="_on_save3_button_up"]

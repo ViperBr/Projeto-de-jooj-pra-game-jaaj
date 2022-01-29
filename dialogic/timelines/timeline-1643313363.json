@@ -17,14 +17,8 @@
 			"text": "E é claro foi um prazer te conhecer, afinal você foi um belo amigo."
 		},
 		{
-			"call_node": {
-				"arguments": [
-
-				],
-				"method_name": "change_scene",
-				"target_node_path": "CanvasLayer"
-			},
-			"event_id": "dialogic_042"
+			"change_scene": "res://scenes/fases/inicio_do_jogo.tscn",
+			"event_id": "dialogic_041"
 		}
 	],
 	"metadata": {

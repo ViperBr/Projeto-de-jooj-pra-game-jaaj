@@ -6,6 +6,8 @@ var save_path1 = SAVE_DIR + "save1.dat"
 var save_path2 = SAVE_DIR + "save2.dat"
 var save_path3 = SAVE_DIR + "save3.dat"
 
+var save_path
+
 func _ready():
 	for child in $".".get_children():
 		child.visible = false
@@ -19,6 +21,15 @@ onready var data = {
 		"character":1,
 		"date": "%s/%s/%s - %s:%s:%s" % [OS.get_datetime().day,OS.get_datetime().month,OS.get_datetime().year, OS.get_datetime().hour,OS.get_datetime().minute,OS.get_datetime().second] 
 	}
+#
+#var file = File.new()
+#	var error = file.open(save_path1,File.WRITE)
+#	if error == OK:
+#		data.date = "%s/%s/%s - %s:%s:%s" % [OS.get_datetime().day,OS.get_datetime().month,OS.get_datetime().year, OS.get_datetime().hour,OS.get_datetime().minute,OS.get_datetime().second]
+#		file.store_var(data)
+#		file.close()
+#
+#	SceneChanger.change_scene("res://scenes/fases/prologue.tscn", "fade",data.weapon_position,save_path1)
 
 func _on_slot1_button_up():
 	
@@ -26,15 +37,19 @@ func _on_slot1_button_up():
 	var dir = Directory.new()
 	if not dir.dir_exists(SAVE_DIR):
 		dir.make_dir_recursive(SAVE_DIR)
-	
 	var file = File.new()
-	var error = file.open(save_path1,File.WRITE)
+	var error = file.open(save_path1,File.READ)
 	if error == OK:
+		$layerNewGame/sure.show()
+		save_path = 1
+	else:
+		file.close()
+		file.open(save_path1,File.WRITE)
 		data.date = "%s/%s/%s - %s:%s:%s" % [OS.get_datetime().day,OS.get_datetime().month,OS.get_datetime().year, OS.get_datetime().hour,OS.get_datetime().minute,OS.get_datetime().second]
 		file.store_var(data)
 		file.close()
+		SceneChanger.change_scene("res://scenes/fases/prologue.tscn", "fade",data.weapon_position,save_path1)
 	
-	SceneChanger.change_scene("res://scenes/fases/prologue.tscn", "fade",data.weapon_position,save_path1)
 
 func _on_slot2_button_up():
 	
@@ -44,12 +59,17 @@ func _on_slot2_button_up():
 		dir.make_dir_recursive(SAVE_DIR)
 		
 	var file = File.new()
-	var error = file.open(save_path2,File.WRITE)
+	var error = file.open(save_path2,File.READ)
 	if error == OK:
+		$layerNewGame/sure.show()
+		save_path = 2
+	else:
+		file.close()
+		file.open(save_path2,File.WRITE)
 		data.date = "%s/%s/%s - %s:%s:%s" % [OS.get_datetime().day,OS.get_datetime().month,OS.get_datetime().year, OS.get_datetime().hour,OS.get_datetime().minute,OS.get_datetime().second]
 		file.store_var(data)
 		file.close()
-	SceneChanger.change_scene("res://scenes/fases/prologue.tscn", "fade",data.weapon_position,save_path2)
+		SceneChanger.change_scene("res://scenes/fases/prologue.tscn", "fade",data.weapon_position,save_path2)
 
 func _on_slot3_button_up():
 	
@@ -57,14 +77,19 @@ func _on_slot3_button_up():
 	var dir = Directory.new()
 	if not dir.dir_exists(SAVE_DIR):
 		dir.make_dir_recursive(SAVE_DIR)
-	
+		
 	var file = File.new()
-	var error = file.open(save_path3,File.WRITE)
+	var error = file.open(save_path3,File.READ)
 	if error == OK:
+		$layerNewGame/sure.show()
+		save_path = 3
+	else:
+		file.close()
+		file.open(save_path3,File.WRITE)
 		data.date = "%s/%s/%s - %s:%s:%s" % [OS.get_datetime().day,OS.get_datetime().month,OS.get_datetime().year, OS.get_datetime().hour,OS.get_datetime().minute,OS.get_datetime().second]
 		file.store_var(data)
 		file.close()
-	SceneChanger.change_scene("res://scenes/fases/prologue.tscn", "fade",data.weapon_position,save_path3)
+		SceneChanger.change_scene("res://scenes/fases/prologue.tscn", "fade",data.weapon_position,save_path3)
 
 
 func _on_newGame_button_up():
@@ -172,3 +197,33 @@ func _on_confirmexit_button_up():
 func _on_ok_button_up():
 	$layerLoadGame/error.hide()
 	pass # Replace with function body.
+
+
+func _on_nao_button_up():
+	$layerNewGame/sure.hide()
+	pass 
+
+
+func _on_sim_button_up():
+	var file = File.new()
+	if save_path == 1:
+		file.open(save_path1,File.WRITE)
+		data.date = "%s/%s/%s - %s:%s:%s" % [OS.get_datetime().day,OS.get_datetime().month,OS.get_datetime().year, OS.get_datetime().hour,OS.get_datetime().minute,OS.get_datetime().second]
+		file.store_var(data)
+		file.close()
+		SceneChanger.change_scene("res://scenes/fases/prologue.tscn", "fade",data.weapon_position,save_path1)
+	elif save_path == 2:
+		file.open(save_path2,File.WRITE)
+		data.slot = 2
+		data.date = "%s/%s/%s - %s:%s:%s" % [OS.get_datetime().day,OS.get_datetime().month,OS.get_datetime().year, OS.get_datetime().hour,OS.get_datetime().minute,OS.get_datetime().second]
+		file.store_var(data)
+		file.close()
+		SceneChanger.change_scene("res://scenes/fases/prologue.tscn", "fade",data.weapon_position,save_path2)
+	else:
+		file.open(save_path3,File.WRITE)
+		data.slot = 3
+		data.date = "%s/%s/%s - %s:%s:%s" % [OS.get_datetime().day,OS.get_datetime().month,OS.get_datetime().year, OS.get_datetime().hour,OS.get_datetime().minute,OS.get_datetime().second]
+		file.store_var(data)
+		file.close()
+		SceneChanger.change_scene("res://scenes/fases/prologue.tscn", "fade",data.weapon_position,save_path3)
+	pass 

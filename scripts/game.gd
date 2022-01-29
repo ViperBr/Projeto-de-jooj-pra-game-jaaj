@@ -17,7 +17,7 @@ func _ready():
 	pass 
 
 func save_state():
-	if data.dialog < 3:
+	if data.dialog < 6:
 		data.dialog += 1
 	else:
 		data.dialog = 1
