@@ -523,7 +523,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ SubResource( 203 ), SubResource( 204 ), SubResource( 205 ), SubResource( 206 ), SubResource( 207 ), SubResource( 208 ), SubResource( 209 ), SubResource( 210 ), SubResource( 211 ), SubResource( 212 ), SubResource( 213 ), SubResource( 214 ), SubResource( 215 ) ],
-"loop": true,
+"loop": false,
 "name": "morre_3_balas",
 "speed": 5.0
 }, {
@@ -582,7 +582,5 @@ animation = "morre_3_balas"
 [node name="fade" type="AnimationPlayer" parent="."]
 autoplay = "fade"
 anims/fade = SubResource( 90 )
-
-[node name="Sprite" type="Sprite" parent="."]
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

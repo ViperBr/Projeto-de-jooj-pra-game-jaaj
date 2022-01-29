@@ -500,6 +500,4 @@ animation = "olhando_pra_baixo"
 [node name="fade" type="AnimationPlayer" parent="."]
 anims/fade = SubResource( 90 )
 
-[node name="Sprite" type="Sprite" parent="."]
-
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

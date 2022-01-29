@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 4
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Este foi seu melhor amigo certo ? Realmente o único ouvido que te escutou por muito tempo."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1643480724.json",
+		"name": "game_chara_4_fala_1"
+	}
+}

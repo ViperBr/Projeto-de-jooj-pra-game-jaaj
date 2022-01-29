@@ -1,0 +1,144 @@
+[gd_scene load_steps=69 format=2]
+
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho5.png" type="Texture" id=1]
+[ext_resource path="res://scenes/atores/sombra6/sombra6.gd" type="Script" id=2]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-6.png" type="Texture" id=5]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho1.png" type="Texture" id=6]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho4.png" type="Texture" id=7]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-8.png" type="Texture" id=8]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-13.png" type="Texture" id=9]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho2.png" type="Texture" id=10]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-7.png" type="Texture" id=11]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-11.png" type="Texture" id=12]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-14.png" type="Texture" id=13]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-15.png" type="Texture" id=14]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-16.png" type="Texture" id=15]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-17.png" type="Texture" id=16]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-18.png" type="Texture" id=17]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-9.png" type="Texture" id=18]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-10.png" type="Texture" id=19]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho12.png" type="Texture" id=20]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho13.png" type="Texture" id=21]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho7.png" type="Texture" id=22]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-4.png" type="Texture" id=23]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-12.png" type="Texture" id=24]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-5.png" type="Texture" id=25]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-1.png" type="Texture" id=26]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho10.png" type="Texture" id=27]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho14.png" type="Texture" id=28]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho15.png" type="Texture" id=29]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho16.png" type="Texture" id=30]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho17.png" type="Texture" id=31]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho18.png" type="Texture" id=32]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho11.png" type="Texture" id=33]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho8.png" type="Texture" id=34]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho3.png" type="Texture" id=35]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho19.png" type="Texture" id=36]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho20.png" type="Texture" id=37]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho21.png" type="Texture" id=38]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho6.png" type="Texture" id=39]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-olhando-no-espelho/se olhando no espelho9.png" type="Texture" id=40]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/se-matando/se-matando-2.png" type="Texture" id=41]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-6.png" type="Texture" id=42]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-9.png" type="Texture" id=43]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-1.png" type="Texture" id=44]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-3.png" type="Texture" id=45]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-5.png" type="Texture" id=46]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-15.png" type="Texture" id=47]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-16.png" type="Texture" id=48]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-4.png" type="Texture" id=49]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-2.png" type="Texture" id=50]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-7.png" type="Texture" id=51]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-13.png" type="Texture" id=52]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-10.png" type="Texture" id=53]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-14.png" type="Texture" id=54]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-11.png" type="Texture" id=55]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-12.png" type="Texture" id=56]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-17.png" type="Texture" id=57]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-18.png" type="Texture" id=58]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-19.png" type="Texture" id=59]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-20.png" type="Texture" id=60]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-21.png" type="Texture" id=61]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-22.png" type="Texture" id=62]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-23.png" type="Texture" id=63]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-24.png" type="Texture" id=64]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-25.png" type="Texture" id=65]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/atira-no-espelho/atira-no-espelho-8.png" type="Texture" id=66]
+[ext_resource path="res://sprites/sombra6 - si mesmo espelho/espelho1.png" type="Texture" id=67]
+
+[sub_resource type="SpriteFrames" id=89]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 35 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 39 ), ExtResource( 22 ), ExtResource( 34 ), ExtResource( 40 ), ExtResource( 27 ), ExtResource( 33 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "comeco",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 41 ), ExtResource( 4 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 12 ), ExtResource( 24 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": false,
+"name": "toma_bala",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 44 ), ExtResource( 50 ), ExtResource( 45 ), ExtResource( 49 ), ExtResource( 46 ), ExtResource( 42 ), ExtResource( 51 ), ExtResource( 66 ), ExtResource( 43 ), ExtResource( 53 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ) ],
+"loop": true,
+"name": "atira_espelho",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=90]
+resource_name = "fade"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.1, 5.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 5, 5.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "set_stopped_fade_to_true"
+}, {
+"args": [  ],
+"method": "play_colocar_mascara"
+} ]
+}
+
+[node name="sombra6" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="mirror" type="Sprite" parent="."]
+scale = Vector2( 7, 7 )
+texture = ExtResource( 67 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 7, 7 )
+frames = SubResource( 89 )
+animation = "toma_bala"
+frame = 17
+playing = true
+
+[node name="fade" type="AnimationPlayer" parent="."]
+autoplay = "fade"
+anims/fade = SubResource( 90 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

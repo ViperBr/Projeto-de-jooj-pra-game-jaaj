@@ -1,0 +1,37 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "O único que você buscou ouvir a dor, o demônio mais santo de sua vida."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Depois dele você caiu em uma escuridão profunda, onde você queria  julgar quem eram os santos e os pecadores."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Pare de olhar para mim como se eu fosse liberar o caminho, sou apenas um falso inimigo o arqui-inimigo da sua redenção apenas um reflexo do seus pecados."
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"sombra4_pode_morrer"
+				],
+				"method_name": "events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1643480732.json",
+		"name": "game_chara_4_fala_2"
+	}
+}

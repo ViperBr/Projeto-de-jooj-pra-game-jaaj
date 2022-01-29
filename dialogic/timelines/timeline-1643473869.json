@@ -39,7 +39,7 @@
 		{
 			"call_node": {
 				"arguments": [
-					""
+					"sombra3_pode_morrer"
 				],
 				"method_name": "events",
 				"target_node_path": "inicio_do_jogo"

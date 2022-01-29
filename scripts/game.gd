@@ -16,6 +16,7 @@ func removing():
 		get_node("sombra%s" % str(int(data.character)-1)).queue_free()
 	VariableSingleton.character = int(data.character)
 	$sombrapos.add_child(load("res://scenes/atores/sombra%s/sombra%s.tscn" % [data.character,data.character]).instance())
+	print_debug("instanciei uma sombra")
 	var sombra = get_node("sombrapos/sombra%s" % data.character)
 	sombra.position = Vector2(359,515)
 	new_dialog = Dialogic.start("game_chara_%s_fala_%s" % [data.character,data.dialog])
@@ -49,6 +50,10 @@ func events(array):
 		$sombrapos/sombra1.can_i()
 	if array[0] == "quem_e_peace":
 		$sombrapos/sombra2.quem_e_peace()
+	if array[0] == "sombra3_pode_morrer":
+		$sombrapos/sombra3.sombra3_pode_morrer()
+	if array[0] == "sombra4_pode_morrer":
+		$sombrapos/sombra4.sombra4_pode_morrer()
 		
 		
 ##For TESTING ONLY, REMOVE THIS AFTER THE GAME IS DONE
@@ -57,7 +62,10 @@ func skip_character():
 	if Input.is_action_just_pressed("skip"):
 		get_node("sombrapos/sombra%s" % data.character).set_animation_shooting_and_dead()
 		data.dialog = 1
-		data.character += 1
+		#data.character += 1
+		##substitui aqui pra qual numero do personagem quer ir direto:
+		data.character = 4
+		
 		save_state()
 		print("Character do data é : " + str(data.character))
 
