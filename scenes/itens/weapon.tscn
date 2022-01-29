@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scripts/weapon.gd" type="Script" id=1]
 [ext_resource path="res://sprites/RevolverUp.png" type="Texture" id=2]
 [ext_resource path="res://sprites/RevolverDown.png" type="Texture" id=3]
+[ext_resource path="res://sprites/seta.png" type="Texture" id=4]
+[ext_resource path="res://sprites/tambor.png" type="Texture" id=5]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
@@ -25,6 +27,98 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 5 )
+region = Rect2( 384, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 5 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 5 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 5 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 5 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 5 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 5 ) ],
+"loop": true,
+"name": "0bullets",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ) ],
+"loop": true,
+"name": "1bullet",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ) ],
+"loop": true,
+"name": "2bullets",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 8 ) ],
+"loop": true,
+"name": "6bullets",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 9 ) ],
+"loop": true,
+"name": "5bullets",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 10 ) ],
+"loop": true,
+"name": "4bullets",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ) ],
+"loop": true,
+"name": "3bullets",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=13]
+radius = 54.9181
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ SubResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "select",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=17]
+
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 123, 172 )
 
@@ -38,6 +132,66 @@ script = ExtResource( 1 )
 scale = Vector2( 6, 6 )
 frames = SubResource( 1 )
 animation = "up"
+
+[node name="roleta" type="AnimatedSprite" parent="."]
+scale = Vector2( 3.42878, 3.42878 )
+frames = SubResource( 12 )
+animation = "1bullet"
+
+[node name="bullet1" type="Area2D" parent="roleta"]
+position = Vector2( -17.8462, 9.84615 )
+scale = Vector2( 0.153846, 0.153846 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="roleta/bullet1"]
+shape = SubResource( 13 )
+
+[node name="bullet2" type="Area2D" parent="roleta"]
+position = Vector2( 0, 20.9231 )
+scale = Vector2( 0.153846, 0.153846 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="roleta/bullet2"]
+shape = SubResource( 13 )
+
+[node name="bullet3" type="Area2D" parent="roleta"]
+position = Vector2( 18, 10 )
+scale = Vector2( 0.153846, 0.153846 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="roleta/bullet3"]
+shape = SubResource( 13 )
+
+[node name="bullet4" type="Area2D" parent="roleta"]
+position = Vector2( 18, -10 )
+scale = Vector2( 0.153846, 0.153846 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="roleta/bullet4"]
+shape = SubResource( 13 )
+
+[node name="bullet5" type="Area2D" parent="roleta"]
+position = Vector2( 0, -20.9231 )
+scale = Vector2( 0.153846, 0.153846 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="roleta/bullet5"]
+shape = SubResource( 13 )
+
+[node name="bullet6" type="Area2D" parent="roleta"]
+position = Vector2( -18, -10.1538 )
+scale = Vector2( 0.153846, 0.153846 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="roleta/bullet6"]
+shape = SubResource( 13 )
+
+[node name="seta" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 188 )
+scale = Vector2( 5.41574, 5.41574 )
+frames = SubResource( 16 )
+animation = "select"
+
+[node name="arrow" type="Area2D" parent="seta"]
+position = Vector2( -2.98023e-08, -20.9386 )
+scale = Vector2( 0.424397, 0.424397 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="seta/arrow"]
+shape = SubResource( 17 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1, -2 )

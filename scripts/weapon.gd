@@ -29,12 +29,19 @@ const SPEED = 25
 func _ready():
 	my_turn = false
 	initial_position = position
+	rest_nodes = get_tree().get_nodes_in_group("zone")
+	rest_point = rest_nodes[0].global_position
+	$roleta.hide()
+	$seta.hide()
 
 func _on_Weapon_input_event(viewport, event, shape_idx):
-	if Input.is_action_pressed("click"):
+	if Input.is_action_pressed("click") and not taked_weapon:
 		selected = true;
 	else:
 		selected = false
+	
+	if Input.is_action_just_pressed("click") and taked_weapon:
+		get_shot()
 
 func _process(delta):
 	if my_turn:
@@ -52,56 +59,38 @@ func _process(delta):
 		global_position = lerp(global_position,initial_position, 5 * delta)
 		
 		
-#	else:
-#		if taked_weapon:
-#			$Sprite.hide()
-#			$selector.show()
-#			if $selector/AnimatedSprite.position.x < 31:
-#				$selector/AnimatedSprite.position.x += 1
-#			else:
-#				$selector/AnimatedSprite.position.x = -31
-#
-#		global_position = lerp(global_position, rest_point, 10 * delta)
-#
-#func _input(event):
-#	if event is InputEventMouseButton:
-#		if event.button_index == BUTTON_LEFT and not event.pressed:
-#
-#			selected = false
-#			var shortest_dist = 100
-#			for child in rest_nodes:
-#				var distance = global_position.distance_to(child.global_position)
-#
-#				if distance <= shortest_dist and child.name == "get_weapon":
-#					taked_weapon = true;
-#					rest_point = child.global_position
-#					child.select()
-#					data.weapon_position = rest_point
-#					var file = File.new()
-#					file.open(path ,File.WRITE)
-#					file.store_var(data)
-#					file.close()
-#					return
-#				elif distance <= shortest_dist:
-#					rest_point = child.global_position
-#					child.select()
-#					data.weapon_position = rest_point
-#					var file = File.new()
-#					file.open(path ,File.WRITE)
-#					file.store_var(data)
-#					file.close()
-#					return
-#				else:
-#					if taked_weapon:
-#						if $selector/Area10.overlaps_area($selector/AnimatedSprite/Area2D):
-#							$selector/AnimatedSprite.modulate = Color.brown
-#						if $selector/Area40.overlaps_area($selector/AnimatedSprite/Area2D):
-#							$selector/AnimatedSprite.modulate = Color.aqua
-#						if $selector/Area50.overlaps_area($selector/AnimatedSprite/Area2D):
-#							$selector/AnimatedSprite.modulate = Color.gold
-#					rest_point = global_position
-#					data.weapon_position = rest_point
-#					var file = File.new()
-#					file.open(path ,File.WRITE)
-#					file.store_var(data)
-#					file.close()
+	if taked_weapon:
+		$AnimatedSprite.hide()
+		$roleta.show()
+		$seta.show()
+		if $roleta.rotation_degrees < 360:
+			$roleta.rotation_degrees += 6
+		else:
+			$roleta.rotation_degrees = 0
+
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and not event.pressed:
+
+			selected = false
+			var shortest_dist = 100
+			for child in rest_nodes:
+				var distance = global_position.distance_to(child.global_position)
+
+				if distance <= shortest_dist and child.name == "get_weapon" and my_turn:
+					taked_weapon = true;
+					initial_position = child.global_position
+					return
+				elif distance <= shortest_dist:
+					rest_point = child.global_position
+					return
+
+
+func get_shot():
+	taked_weapon = false
+	$AnimatedSprite.show()
+	$roleta.hide()
+	$seta.hide()
+	global_position = Vector2(1013,777)
+	
