@@ -21,7 +21,7 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Realmente era uma época boa e despreocupada, certo ?"
+			"text": "A infância é realmente um tempo que deixamos passar com facilidade e apesar de não ser dos melhores nós sempre nos lembramos dele como um grande marco sem volta onde deixamos de fazer muitas coisas, mas os erros não são além de uma construção do nosso futuro eu?"
 		},
 		{
 			"definition": "1643317029-366",
@@ -38,7 +38,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.3",
-		"file": "timeline-1643416023.json",
-		"name": "inicio_do_jogo2"
+		"file": "timeline-1643422915.json",
+		"name": "inicio_do_jogo5"
 	}
 }

@@ -8,8 +8,8 @@ func _ready():
 	if file.file_exists(SceneChanger.path):
 		file.open(SceneChanger.path,File.READ)
 		var lite = file.get_var()
-		if lite.dialog != 1 and lite.character != 1:
-			new_dialog = Dialogic.start("prologue")
+		if lite.dialog != 1 and lite.character != 1 or lite.dialog != 1 and lite.character == 1:
+			new_dialog = Dialogic.start("continue")
 	$Control.add_child(new_dialog)
 	pass 
 

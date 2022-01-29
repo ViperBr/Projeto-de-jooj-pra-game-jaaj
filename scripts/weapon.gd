@@ -27,12 +27,17 @@ const SPEED = 25
 
 
 func _ready():
-	my_turn = false
+	my_turn = true
 	initial_position = position
 	rest_nodes = get_tree().get_nodes_in_group("zone")
 	rest_point = rest_nodes[0].global_position
 	$roleta.hide()
 	$seta.hide()
+
+func set_sombra_shot():
+	if not my_turn:
+		get_node("/root/inicio_do_jogo").sombra_is_shooting()
+		my_turn = true
 
 func _on_Weapon_input_event(viewport, event, shape_idx):
 	if Input.is_action_pressed("click") and not taked_weapon:
@@ -68,7 +73,6 @@ func _process(delta):
 		else:
 			$roleta.rotation_degrees = 0
 
-
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and not event.pressed:
@@ -84,13 +88,21 @@ func _input(event):
 					return
 				elif distance <= shortest_dist:
 					rest_point = child.global_position
+					set_sombra_shot()
 					return
 
+func set_dead():
+	SceneChanger.change_scene("res://scenes/fases/dead.tscn", "fade", null, SceneChanger.path)
 
 func get_shot():
 	taked_weapon = false
+	my_turn = false
+	for bullet in $seta/arrow.get_overlapping_areas():
+		if bullet.name == "bullet1":
+			print_debug("BANG levou um tiro")
+			set_dead();
 	$AnimatedSprite.show()
 	$roleta.hide()
 	$seta.hide()
-	global_position = Vector2(1013,777)
+	global_position = Vector2(1413,777)
 	

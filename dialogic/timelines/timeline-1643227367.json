@@ -5,30 +5,6 @@
 			"wait_seconds": 10
 		},
 		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Realmente era uma época boa e despreocupada, certo ?"
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Antes dos confrontos, antes das guerras e das terras era apenas paz."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Eu apenas me preocupava apenas em ser o melhor filho que eu podia para minha mãe."
-		},
-		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "A infância é realmente um tempo que deixamos passar com facilidade e apesar de não ser dos melhores nós sempre nos lembramos dele como um grande marco sem volta onde deixamos de fazer muitas coisas, mas os erros não são além de uma construção do nosso futuro eu?"
-		},
-		{
 			"character": "character-1643321552.json",
 			"event_id": "dialogic_010",
 			"options": [
@@ -62,17 +38,21 @@
 			"value": ""
 		},
 		{
-			"character": "",
+			"character": "character-1643321552.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Te aguardo "
 		},
 		{
-			"event_id": "dialogic_023",
-			"wait_seconds": 2
+			"event_id": "dialogic_013"
 		},
 		{
-			"event_id": "dialogic_013"
+			"definition": "1643317029-366",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "2"
 		},
 		{
 			"event_id": "dialogic_022",

@@ -20,10 +20,13 @@ position = Vector2( 356, 560 )
 position = Vector2( 357, 542 )
 
 [node name="get_weapon" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1347, 807 )
+position = Vector2( 1098, 807 )
 
 [node name="Weapon" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1197, 588 )
 
 [node name="notebook" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1615, 670 )
+position = Vector2( 1615, 529 )
+
+[node name="send_weapon" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1097, 258 )
