@@ -21,6 +21,7 @@ func removing():
 	new_dialog = Dialogic.start("game_chara_%s_fala_%s" % [data.character,data.dialog])
 	add_child(new_dialog,true)
 
+
 func save_state():
 	
 	data.date = "%s/%s/%s - %s:%s:%s" % [OS.get_datetime().day,OS.get_datetime().month,OS.get_datetime().year, OS.get_datetime().hour,OS.get_datetime().minute,OS.get_datetime().second] 
@@ -45,5 +46,20 @@ func sombra_is_shooting():
 
 func events(array):
 	if array[0] == "can_i":
-		print_debug("chega")
 		$sombrapos/sombra1.can_i()
+	if array[0] == "quem_e_peace":
+		$sombrapos/sombra2.quem_e_peace()
+		
+		
+##For TESTING ONLY, REMOVE THIS AFTER THE GAME IS DONE
+func skip_character():
+	#if pressed K (which is the key for skipping)
+	if Input.is_action_just_pressed("skip"):
+		get_node("sombrapos/sombra%s" % data.character).set_animation_shooting_and_dead()
+		data.dialog = 1
+		data.character += 1
+		save_state()
+
+##For TESTING ONLY, REMOVE THIS AFTER THE GAME IS DONE
+func _process(delta):
+	skip_character()

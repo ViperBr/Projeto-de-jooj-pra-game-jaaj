@@ -7,6 +7,9 @@ var rest_point
 var rest_nodes = []
 var data
 
+
+
+
 #func _ready():
 #	path = SceneChanger.path	
 #	rest_nodes = get_tree().get_nodes_in_group("zone")
@@ -24,6 +27,8 @@ var data
 onready var my_turn:bool
 onready var initial_position
 const SPEED = 25
+
+var shortest_dist = 200
 
 
 func _ready():
@@ -98,7 +103,7 @@ func _input(event):
 		if event.button_index == BUTTON_LEFT and not event.pressed:
 
 			selected = false
-			var shortest_dist = 100
+			
 			for child in rest_nodes:
 				var distance = global_position.distance_to(child.global_position)
 

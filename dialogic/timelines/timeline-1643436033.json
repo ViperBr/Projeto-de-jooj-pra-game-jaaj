@@ -5,6 +5,20 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "As marcas em seu rosto, não era mais o mesmo tipo de piada."
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 1
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Todos cometemos erros, tivemos a nossa parte."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
 		}
 	],
 	"metadata": {

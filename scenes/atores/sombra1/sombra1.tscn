@@ -121,10 +121,6 @@ region = Rect2( 1734, 0, 102, 110 )
 atlas = ExtResource( 2 )
 region = Rect2( 1836, 0, 102, 110 )
 
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 102, 110 )
-
 [sub_resource type="AtlasTexture" id=60]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 102, 110 )
@@ -148,6 +144,10 @@ region = Rect2( 408, 0, 102, 110 )
 [sub_resource type="AtlasTexture" id=65]
 atlas = ExtResource( 3 )
 region = Rect2( 510, 0, 102, 110 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 102, 110 )
 
 [sub_resource type="AtlasTexture" id=66]
 atlas = ExtResource( 3 )
@@ -230,14 +230,14 @@ animations = [ {
 "name": "pondo_mascara",
 "speed": 7.0
 }, {
-"frames": [ SubResource( 12 ) ],
-"loop": false,
-"name": "comeco",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 64 ), SubResource( 63 ), SubResource( 62 ), SubResource( 61 ), SubResource( 60 ) ],
 "loop": false,
 "name": "shooting",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 12 ) ],
+"loop": false,
+"name": "comeco",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ) ],
@@ -279,7 +279,7 @@ tracks/1/keys = {
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-modulate = Color( 0.3, 0.3, 0.3, 0 )
+modulate = Color( 1, 1, 1, 0 )
 scale = Vector2( 7, 7 )
 frames = SubResource( 1 )
 animation = "shooting_and_dead"
