@@ -3,7 +3,7 @@
 [ext_resource path="res://sprites/sombra1 - mulher/S1negando.png" type="Texture" id=1]
 [ext_resource path="res://sprites/sombra1 - mulher/S1pondo-mascara.png" type="Texture" id=2]
 [ext_resource path="res://sprites/sombra1 - mulher/S1levando-tiro.png" type="Texture" id=3]
-[ext_resource path="res://scenes/atores/sombra1/Sombra1.gd" type="Script" id=4]
+[ext_resource path="res://scenes/atores/sombra1/sombra1.gd" type="Script" id=4]
 
 [sub_resource type="AtlasTexture" id=31]
 atlas = ExtResource( 2 )

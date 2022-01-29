@@ -7,6 +7,26 @@
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 95, 106 )
 
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 380, 0, 95, 106 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 285, 0, 95, 106 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 190, 0, 95, 106 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 95, 0, 95, 106 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 95, 106 )
+
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 1 )
 region = Rect2( 380, 0, 95, 106 )
@@ -31,32 +51,17 @@ region = Rect2( 285, 0, 95, 106 )
 atlas = ExtResource( 1 )
 region = Rect2( 380, 0, 95, 106 )
 
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 1 )
-region = Rect2( 380, 0, 95, 106 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 1 )
-region = Rect2( 285, 0, 95, 106 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 1 )
-region = Rect2( 190, 0, 95, 106 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 1 )
-region = Rect2( 95, 0, 95, 106 )
-
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 95, 106 )
-
 [sub_resource type="SpriteFrames" id=12]
 animations = [ {
 "frames": [ SubResource( 13 ) ],
 "loop": false,
 "name": "closed",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": false,
+"name": "closing",
+"speed": 10.0
 }, {
 "frames": [ SubResource( 14 ) ],
 "loop": false,
@@ -67,15 +72,10 @@ animations = [ {
 "loop": false,
 "name": "opening",
 "speed": 10.0
-}, {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
-"loop": false,
-"name": "closing",
-"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 284, 197 )
+extents = Vector2( 164.5, 197 )
 
 [node name="notebook" type="Area2D"]
 script = ExtResource( 2 )
@@ -87,7 +87,7 @@ frames = SubResource( 12 )
 animation = "closed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 14, 4 )
+position = Vector2( 133.5, 4 )
 shape = SubResource( 15 )
 
 [connection signal="input_event" from="." to="." method="_on_notebook_input_event"]
