@@ -17,3 +17,8 @@ func set_animation_shooting():
 	
 func set_animation_shooting_and_dead():
 	$AnimatedSprite.play("shooting_and_dead")
+
+
+func _on_AnimatedSprite_animation_finished():
+	if $AnimatedSprite.animation == "shooting_and_dead":
+		get_node("/root/inicio_do_jogo").removing()

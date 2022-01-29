@@ -4,17 +4,22 @@ var file
 var data
 var new_dialog
 func _ready():
-	new_dialog= Dialogic.start("inicio_do_jogo1")
 	file = File.new()
 	file.open(SceneChanger.path,File.READ)
 	data = file.get_var()
-	if data.character == 1:
-		new_dialog = Dialogic.start("inicio_do_jogo%s" % [data.dialog])
-	else:
-		new_dialog = Dialogic.start("game_chara%s_fala%s" % [data.character,data.dialog])
 	file.close()
-	add_child(new_dialog,true)
+	removing()
 	pass 
+
+func removing():
+	if get_node("sombra%s" % str(int(data.character)-1)):
+		get_node("sombra%s" % str(int(data.character)-1)).queue_free()
+	VariableSingleton.character = int(data.character)
+	$sombrapos.add_child(load("res://scenes/atores/sombra%s/sombra%s.tscn" % [data.character,data.character]).instance())
+	var sombra = get_node("sombrapos/sombra%s" % data.character)
+	sombra.position = Vector2(359,515)
+	new_dialog = Dialogic.start("game_chara_%s_fala_%s" % [data.character,data.dialog])
+	add_child(new_dialog,true)
 
 func save_state():
 	
@@ -27,12 +32,18 @@ func save_state():
 func sombra_is_shooting():
 	if data.dialog < 5:
 		data.dialog += 1
-		new_dialog= Dialogic.start("inicio_do_jogo%s" % data.dialog)
+		
+		new_dialog= Dialogic.start("game_chara_%s_fala_%s" % [data.character,data.dialog])
 		add_child(new_dialog,true)
-		$sombra1.set_animation_shooting()
+		get_node("sombrapos/sombra%s" % data.character).set_animation_shooting()
 		save_state()
 	else:
+		get_node("sombrapos/sombra%s" % data.character).set_animation_shooting_and_dead()
 		data.dialog = 1
 		data.character += 1
 		save_state()
-		$sombra1.set_animation_shooting_and_dead()
+
+func events(array):
+	if array[0] == "can_i":
+		print_debug("chega")
+		$sombrapos/sombra1.can_i()
