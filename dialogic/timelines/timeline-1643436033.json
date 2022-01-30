@@ -1,6 +1,16 @@
 {
 	"events": [
 		{
+			"call_node": {
+				"arguments": [
+					"dialog_is_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"event_id": "dialogic_024",
 			"set_theme": "theme-1643494434.cfg"
 		},
@@ -23,6 +33,16 @@
 		{
 			"event_id": "dialogic_022",
 			"transition_duration": 0.5
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {

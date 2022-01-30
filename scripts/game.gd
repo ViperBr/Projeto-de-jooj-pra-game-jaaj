@@ -61,6 +61,18 @@ func events(array):
 	if array[0] == "sombra6_atira_espelho":
 		$sombrapos/sombra6.sombra6_atira_espelho()
 		
+func dialog_events(array):
+	if array[0] == "dialog_is_running":
+		dialog_is_running()
+	if array[0] == "dialog_not_running":
+		dialog_not_running()
+		
+		
+func dialog_is_running():
+	VariableSingleton.is_there_dialog_running = true
+
+func dialog_not_running():
+	VariableSingleton.is_there_dialog_running = false
 		
 ##For TESTING ONLY, REMOVE THIS AFTER THE GAME IS DONE
 func skip_character():

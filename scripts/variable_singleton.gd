@@ -9,6 +9,8 @@ var is_back_button_pressed:bool
 
 var is_there_something_new:bool
 
+var is_there_dialog_running:bool
+
 
 var character
 

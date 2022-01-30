@@ -22,10 +22,30 @@
 			"event_id": "dialogic_013"
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"dialog_is_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "A infância é realmente um tempo que deixamos passar com facilidade e apesar de não ser dos melhores nós sempre nos lembramos dele como um grande marco sem volta onde deixamos de fazer muitas coisas, mas os erros não são além de uma construção do nosso futuro eu?"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"definition": "1643317029-366",

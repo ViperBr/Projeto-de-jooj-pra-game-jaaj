@@ -23,12 +23,17 @@ var count3 = 0
 var count4 = 0
 var count5 = 0
 
+
 func _process(delta):
 	if VariableSingleton.is_notebook_interface_visible:
 		show()
 		VariableSingleton.is_there_something_new = false
 	else:
 		hide()
+		
+	if VariableSingleton.is_there_dialog_running and VariableSingleton.is_notebook_interface_visible:
+		VariableSingleton.is_notebook_interface_visible = false
+		VariableSingleton.is_back_button_pressed = true
 	
 	if VariableSingleton.character == 1:
 		if count1 == 0:

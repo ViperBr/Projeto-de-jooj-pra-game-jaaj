@@ -9,10 +9,30 @@
 			"wait_seconds": 4
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"dialog_is_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "As ruínas de um dia que não recordará, pintadas com uma cicatriz."
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"event_id": "dialogic_022",

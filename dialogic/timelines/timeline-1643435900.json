@@ -5,10 +5,30 @@
 			"set_theme": "theme-1643494434.cfg"
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"dialog_is_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Quanto mais eu tentava me endireitar, menos eles queriam tentar."
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"event_id": "dialogic_022",

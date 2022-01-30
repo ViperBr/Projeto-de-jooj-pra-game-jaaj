@@ -1,6 +1,16 @@
 {
 	"events": [
 		{
+			"call_node": {
+				"arguments": [
+					"dialog_is_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"event_id": "dialogic_024",
 			"set_theme": "theme-1643493562.cfg"
 		},
@@ -9,6 +19,16 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "analgésicos e roupas legais, tocado por Midas passou a ser feito de ouro… o mundo abaixo de você quanto mais alto mais perto do divino."
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
 		}
 	],
 	"metadata": {
