@@ -1,11 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/itens/weapon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ambientacao/Ambiente.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/LivroAberto.png" type="Texture" id=3]
 [ext_resource path="res://scenes/ambientacao/Mesa.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/game.gd" type="Script" id=5]
 [ext_resource path="res://scenes/itens/notebook.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/rest_position.tscn" type="PackedScene" id=7]
+[ext_resource path="res://sprites/fotos/foto-sombra-1.png" type="Texture" id=8]
+[ext_resource path="res://sprites/fotos/foto-sombra-4.png" type="Texture" id=9]
+[ext_resource path="res://sprites/fotos/foto-sombra-3.png" type="Texture" id=10]
+[ext_resource path="res://sprites/fotos/foto-sombra-2.png" type="Texture" id=11]
+[ext_resource path="res://sprites/fotos/foto-sombra-5.png" type="Texture" id=12]
+[ext_resource path="res://Fonts/fonte_caderno.tres" type="DynamicFont" id=13]
+[ext_resource path="res://scripts/Interface_Caderno.gd" type="Script" id=14]
 
 [node name="inicio_do_jogo" type="Node"]
 script = ExtResource( 5 )
@@ -28,3 +36,102 @@ position = Vector2( 1615, 529 )
 
 [node name="send_weapon" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1097, 258 )
+
+[node name="Interface_do_caderno" type="CanvasLayer" parent="."]
+
+[node name="Caderno" type="Control" parent="Interface_do_caderno"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite_do_caderno" type="TextureRect" parent="Interface_do_caderno/Caderno"]
+modulate = Color( 0.901961, 0.901961, 0.901961, 1 )
+margin_left = 88.0
+margin_top = 36.0
+margin_right = 1756.0
+margin_bottom = 1023.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fotos" type="Control" parent="Interface_do_caderno/Caderno"]
+margin_left = 88.0
+margin_top = 36.0
+margin_right = 128.0
+margin_bottom = 76.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="foto1" type="TextureRect" parent="Interface_do_caderno/Caderno/fotos"]
+margin_left = 49.0
+margin_top = 150.0
+margin_right = 381.0
+margin_bottom = 482.0
+rect_rotation = -12.7855
+texture = ExtResource( 8 )
+expand = true
+
+[node name="foto2" type="TextureRect" parent="Interface_do_caderno/Caderno/fotos"]
+visible = false
+margin_left = 417.0
+margin_top = 145.0
+margin_right = 749.0
+margin_bottom = 477.0
+texture = ExtResource( 11 )
+expand = true
+
+[node name="foto3" type="TextureRect" parent="Interface_do_caderno/Caderno/fotos"]
+visible = false
+margin_left = 169.0
+margin_top = 515.0
+margin_right = 501.0
+margin_bottom = 847.0
+texture = ExtResource( 10 )
+expand = true
+
+[node name="foto4" type="TextureRect" parent="Interface_do_caderno/Caderno/fotos"]
+visible = false
+margin_left = 1076.0
+margin_top = 117.0
+margin_right = 1408.0
+margin_bottom = 449.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="foto5" type="TextureRect" parent="Interface_do_caderno/Caderno/fotos"]
+visible = false
+margin_left = 1086.0
+margin_top = 510.0
+margin_right = 1418.0
+margin_bottom = 842.0
+texture = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="TextureButton" parent="Interface_do_caderno/Caderno"]
+margin_left = 1459.0
+margin_top = 841.0
+margin_right = 1684.0
+margin_bottom = 932.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Interface_do_caderno/Caderno/Voltar"]
+margin_right = 243.0
+margin_bottom = 85.0
+custom_fonts/font = ExtResource( 13 )
+text = "Voltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Interface_do_caderno/Caderno/Voltar" to="Interface_do_caderno/Caderno" method="_on_Voltar_pressed"]

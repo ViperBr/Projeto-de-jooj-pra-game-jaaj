@@ -1,11 +1,16 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sprites/LivroSpriteSheet.png" type="Texture" id=1]
 [ext_resource path="res://scripts/notebook.gd" type="Script" id=2]
+[ext_resource path="res://sprites/notificacao-caderno.png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 95, 106 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 380, 0, 95, 106 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
@@ -26,10 +31,6 @@ region = Rect2( 95, 0, 95, 106 )
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 95, 106 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 1 )
-region = Rect2( 380, 0, 95, 106 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
@@ -58,15 +59,15 @@ animations = [ {
 "name": "closed",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
-"loop": false,
-"name": "closing",
-"speed": 10.0
-}, {
 "frames": [ SubResource( 14 ) ],
 "loop": false,
 "name": "opened",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": false,
+"name": "closing",
+"speed": 10.0
 }, {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": false,
@@ -89,6 +90,11 @@ animation = "closed"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 133.5, 4 )
 shape = SubResource( 15 )
+
+[node name="Notificacao-caderno" type="Sprite" parent="."]
+position = Vector2( 251, -173 )
+scale = Vector2( 1.65843, 1.65843 )
+texture = ExtResource( 3 )
 
 [connection signal="input_event" from="." to="." method="_on_notebook_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_notebook_mouse_entered"]
