@@ -7,7 +7,7 @@ onready var can_die:bool = false
 onready var dead:bool=false
 
 func _ready():
-	$AnimatedSprite.play("sem_mascara")
+	$AnimatedSprite.play("normal")
 	$fade.play("fade")
 
 func play_colocar_mascara():
@@ -20,16 +20,16 @@ func _on_AnimatedSprite_animation_finished():
 			
 	if $AnimatedSprite.animation == "toma_bala":
 		get_node("/root/inicio_do_jogo").data.character += 1
+		$fade.play("fade_out")
 		get_node("/root/inicio_do_jogo").removing()
+		get_node("/root/inicio_do_jogo").save_state()
 		print_debug("chamando removing")
 		
 func set_animation_shooting():
 	return
 
 func set_animation_shooting_and_dead():
-	if not dead:
-		dead = true
-		$AnimatedSprite.play("toma_bala")
+	$AnimatedSprite.play("toma_bala")
 		
 func set_stopped_fade_to_true():
 	stopped_fade = true

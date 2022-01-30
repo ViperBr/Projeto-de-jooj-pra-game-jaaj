@@ -1,0 +1,33 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1643493562.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Realmente um triste final depois de tomar tanto de tantas pessoas ser devorado pela enfermidade que assola o mundo, de acordo com muitas das vítimas… mais do que merecido."
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"sombra5_pode_morrer"
+				],
+				"method_name": "events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1643495157.json",
+		"name": "game_chara_5_fala_4"
+	}
+}

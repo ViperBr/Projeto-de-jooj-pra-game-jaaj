@@ -4,14 +4,14 @@
 	],
 	"variables": [
 		{
-			"id": "1643315395-648",
-			"name": "random",
+			"id": "1643317029-366",
+			"name": "dialog template",
 			"type": 0,
 			"value": "1"
 		},
 		{
-			"id": "1643317029-366",
-			"name": "dialog template",
+			"id": "1643315395-648",
+			"name": "random",
 			"type": 0,
 			"value": "1"
 		}

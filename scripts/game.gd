@@ -54,6 +54,8 @@ func events(array):
 		$sombrapos/sombra3.sombra3_pode_morrer()
 	if array[0] == "sombra4_pode_morrer":
 		$sombrapos/sombra4.sombra4_pode_morrer()
+	if array[0] == "sombra5_pode_morrer":
+		$sombrapos/sombra5.sombra5_pode_morrer()
 		
 		
 ##For TESTING ONLY, REMOVE THIS AFTER THE GAME IS DONE
@@ -64,10 +66,10 @@ func skip_character():
 		data.dialog = 1
 		#data.character += 1
 		##substitui aqui pra qual numero do personagem quer ir direto:
-		data.character = 4
+		data.character = 6
 		
 		save_state()
-		print("Character do data é : " + str(data.character))
+		print_debug("Character do data é : " + str(data.character))
 
 ##For TESTING ONLY, REMOVE THIS AFTER THE GAME IS DONE
 func _process(delta):

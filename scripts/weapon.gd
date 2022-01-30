@@ -7,22 +7,7 @@ var rest_point
 var rest_nodes = []
 var data
 
-
-
-
-#func _ready():
-#	path = SceneChanger.path	
-#	rest_nodes = get_tree().get_nodes_in_group("zone")
-#	rest_point = rest_nodes[0].global_position
-#	var file = File.new()
-#	if file.file_exists(path):
-#		var error = file.open(path,File.READ)
-#		if error == OK:
-#			data = file.get_var()
-#			rest_point = data.weapon_position
-#			file.close()
-#
-
+onready var rotation_degree_speed = 6
 
 onready var my_turn:bool
 onready var initial_position
@@ -30,6 +15,7 @@ const SPEED = 25
 
 var shortest_dist = 200
 
+onready var timer_give_weapon
 
 func _ready():
 	my_turn = true
@@ -39,6 +25,14 @@ func _ready():
 	set_weapon_bullets()
 	$roleta.hide()
 	$seta.hide()
+	
+	timer_give_weapon = Timer.new()
+	timer_give_weapon.set_one_shot(true)
+	timer_give_weapon.set_wait_time(2)
+	add_child(timer_give_weapon)
+	timer_give_weapon.connect("timeout",self,"_enable_weapon_visibility")
+	
+	
 
 func set_weapon_bullets():
 	if VariableSingleton.character == 2:
@@ -49,8 +43,11 @@ func set_weapon_bullets():
 		$roleta.play("4bullets")
 	elif VariableSingleton.character == 5:
 		$roleta.play("5bullets")
+		rotation_degree_speed = 5
 	elif VariableSingleton.character == 6:
 		$roleta.play("6bullets")
+		my_turn = false
+		$AnimatedSprite.visible = false
 	elif VariableSingleton.character == 1:
 		$roleta.play("1bullet")
 	else:
@@ -61,6 +58,13 @@ func set_sombra_shot():
 		get_node("/root/inicio_do_jogo").sombra_is_shooting()
 		set_weapon_bullets()
 		my_turn = true
+		$AnimatedSprite.visible = false
+		timer_give_weapon.start()
+		global_position = lerp(global_position, initial_position, SPEED * get_physics_process_delta_time())
+
+func _enable_weapon_visibility():
+	$AnimatedSprite.visible = true
+	print_debug("ativo a visibilidade da arma")
 
 func _on_Weapon_input_event(viewport, event, shape_idx):
 	if Input.is_action_pressed("click") and not taked_weapon:
@@ -94,7 +98,7 @@ func _process(delta):
 		$roleta.show()
 		$seta.show()
 		if $roleta.rotation_degrees < 360:
-			$roleta.rotation_degrees += 6
+			$roleta.rotation_degrees += rotation_degree_speed
 		else:
 			$roleta.rotation_degrees = 0
 

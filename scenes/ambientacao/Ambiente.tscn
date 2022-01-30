@@ -15,6 +15,7 @@ position = Vector2( 354, 542 )
 
 [node name="Mesa" parent="." instance=ExtResource( 4 )]
 position = Vector2( 357, 542 )
+z_index = 1
 
 [node name="Mesa_principal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1322, 541 )

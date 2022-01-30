@@ -2,13 +2,17 @@
 	"events": [
 		{
 			"event_id": "dialogic_024",
-			"set_theme": "theme-1643494434.cfg"
+			"set_theme": "theme-1643493562.cfg"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 4
 		},
 		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "As marcas em seu rosto, não era mais o mesmo tipo de piada."
+			"text": "Fiquei esperando por anos , esperando e preparando vivendo minha aconchegante vida."
 		},
 		{
 			"event_id": "dialogic_023",
@@ -18,16 +22,16 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Todos cometemos erros, tivemos a nossa parte."
+			"text": "Faminto por todas as vistas, sempre querendo vê-las"
 		},
 		{
 			"event_id": "dialogic_022",
-			"transition_duration": 0.5
+			"transition_duration": 1
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.3",
-		"file": "timeline-1643436033.json",
-		"name": "game_chara_2_fala_5"
+		"file": "timeline-1643493443.json",
+		"name": "game_chara_5_fala_1"
 	}
 }

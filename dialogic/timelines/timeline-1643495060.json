@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1643493562.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Delícias terrenas, sente que precisa delas, seus apetites… será que ajudei as alimentei ?"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 1
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1643495060.json",
+		"name": "game_chara_5_fala_2"
+	}
+}

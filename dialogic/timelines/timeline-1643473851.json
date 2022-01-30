@@ -1,8 +1,12 @@
 {
 	"events": [
 		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1643494441.cfg"
+		},
+		{
 			"event_id": "dialogic_023",
-			"wait_seconds": 4
+			"wait_seconds": 6
 		},
 		{
 			"character": "",

@@ -1,0 +1,84 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 8
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1643494464.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Eu te vejo. Você me vê."
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 2
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Um sentimento agradável ? Eu senti sua falta, minha falta."
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 1
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sua voz me consola, como as horas passam não é mesmo."
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 1
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Eu preciso te perguntar antes que o jogo acabe… Muitos me dizem que não há recomeços, você acredita nisso ?"
+		},
+		{
+			"choice": "atirar em si mesmo de novo dessa vez 100% morrendo.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": " atirar no espelho.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "colocar a arma sob a mesa.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1643495189.json",
+		"name": "game_chara_6_fala_1"
+	}
+}

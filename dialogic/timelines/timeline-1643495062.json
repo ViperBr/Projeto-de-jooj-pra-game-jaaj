@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1643493562.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "analgésicos e roupas legais, tocado por Midas passou a ser feito de ouro… o mundo abaixo de você quanto mais alto mais perto do divino."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1643495062.json",
+		"name": "game_chara_5_fala_3"
+	}
+}
