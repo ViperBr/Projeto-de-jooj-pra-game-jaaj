@@ -133,7 +133,15 @@ func get_shot():
 	for bullet in $seta/arrow.get_overlapping_areas():
 		if bullet.name == "bullet1":
 			set_dead();
-		elif bullet.name == "bullet2" and get_node("/root/inicio_do_jogo").data.character >= 2:
+		elif bullet.name == "bullet2" and VariableSingleton.character >= 2:
+			set_dead();
+		elif bullet.name == "bullet3" and VariableSingleton.character >= 3:
+			set_dead();
+		elif bullet.name == "bullet4" and VariableSingleton.character >= 4:
+			set_dead();
+		elif bullet.name == "bullet5" and VariableSingleton.character >= 5:
+			set_dead();
+		elif bullet.name == "bullet6" and VariableSingleton.character >= 6:
 			set_dead();
 	$AnimatedSprite.show()
 	$roleta.hide()
