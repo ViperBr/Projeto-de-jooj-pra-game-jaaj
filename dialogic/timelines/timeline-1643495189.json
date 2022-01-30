@@ -55,11 +55,31 @@
 			"value": ""
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"sombra6_se_mata"
+				],
+				"method_name": "events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"choice": " atirar no espelho.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"sombra6_atira_espelho"
+				],
+				"method_name": "events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"choice": "colocar a arma sob a mesa.",

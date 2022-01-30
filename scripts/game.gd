@@ -56,6 +56,10 @@ func events(array):
 		$sombrapos/sombra4.sombra4_pode_morrer()
 	if array[0] == "sombra5_pode_morrer":
 		$sombrapos/sombra5.sombra5_pode_morrer()
+	if array[0] == "sombra6_se_mata":
+		$sombrapos/sombra6.sombra6_se_mata()
+	if array[0] == "sombra6_atira_espelho":
+		$sombrapos/sombra6.sombra6_atira_espelho()
 		
 		
 ##For TESTING ONLY, REMOVE THIS AFTER THE GAME IS DONE
@@ -65,8 +69,7 @@ func skip_character():
 		get_node("sombrapos/sombra%s" % data.character).set_animation_shooting_and_dead()
 		data.dialog = 1
 		#data.character += 1
-		##substitui aqui pra qual numero do personagem quer ir direto:
-		data.character = 6
+		data.character = 6 ##substitui aqui pra qual numero do personagem quer ir direto
 		
 		save_state()
 		print_debug("Character do data é : " + str(data.character))
