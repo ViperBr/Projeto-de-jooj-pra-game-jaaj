@@ -14,7 +14,7 @@ func play_colocar_mascara():
 	$AnimatedSprite.play("pondo_mascara")
 
 func _on_AnimatedSprite_animation_finished():
-	if $AnimatedSprite.animation != "parado" and $AnimatedSprite.animation != "atirando_morrendo" and $AnimatedSprite.animation != "olhando_pra_baixo" and stopped_fade:
+	if $AnimatedSprite.animation != "atirando_morrendo" and $AnimatedSprite.animation != "olhando_pra_baixo" and $AnimatedSprite.animation != "toma_bala" and stopped_fade:
 		if not dead:
 			$AnimatedSprite.play("parado")
 			

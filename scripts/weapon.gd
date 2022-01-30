@@ -47,7 +47,8 @@ func set_weapon_bullets():
 	elif VariableSingleton.character == 6:
 		$roleta.play("6bullets")
 		my_turn = false
-		$AnimatedSprite.visible = false
+		
+		
 	elif VariableSingleton.character == 1:
 		$roleta.play("1bullet")
 	else:
@@ -81,6 +82,9 @@ func _process(delta):
 		$AnimatedSprite.play("up")
 	else:
 		$AnimatedSprite.play("down")
+	
+	if VariableSingleton.character == 6:
+		$AnimatedSprite.visible = VariableSingleton.sombra6_weapon_visible
 	
 	if selected: #and VariableSingleton.is_weapon_on_table:
 		global_position = lerp(global_position, get_global_mouse_position(), SPEED * delta);

@@ -15,4 +15,3 @@ func change_scene(new_scene, anim="fade", data=Vector2(850,278), savepath="user:
 
 func new_scene():
 	get_tree().change_scene(scene)
-

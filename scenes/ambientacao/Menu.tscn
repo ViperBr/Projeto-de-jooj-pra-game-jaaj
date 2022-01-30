@@ -1,6 +1,7 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
+[ext_resource path="res://sprites/menu.png" type="Texture" id=2]
 [ext_resource path="res://sprites/Botoes Menu/botao sair/sair mouse.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Botoes Menu/Botao opcoes/botao opcoes mouse.png" type="Texture" id=4]
 [ext_resource path="res://sprites/Botoes Menu/Botao carregar/carregar idle.png" type="Texture" id=5]
@@ -13,6 +14,7 @@
 [ext_resource path="res://sprites/Botoes Menu/Botao opcoes/botao opcoes idle.png" type="Texture" id=12]
 [ext_resource path="res://sprites/Botoes Menu/Botao carregar/botao carregar mouse.png" type="Texture" id=13]
 [ext_resource path="res://sprites/Botoes Menu/botao iniciar/botao iniciar idle.png" type="Texture" id=14]
+[ext_resource path="res://sprites/menu2.png" type="Texture" id=15]
 [ext_resource path="res://Fonts/VT323-Regular.ttf" type="DynamicFontData" id=18]
 [ext_resource path="res://sprites/interface/Iniciar_jogo_mouse.png" type="Texture" id=19]
 [ext_resource path="res://sprites/interface/Iniciar_jogo_click.png" type="Texture" id=20]
@@ -91,6 +93,11 @@ color = Color( 1, 1, 1, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureRect" type="TextureRect" parent="layerBase"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="layerBase"]
 margin_left = 1056.0
@@ -240,9 +247,19 @@ custom_fonts/font = SubResource( 19 )
 text = "Sim"
 
 [node name="layerNewGame" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="layerNewGame"]
+modulate = Color( 0.32549, 0.478431, 0.517647, 1 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -460,6 +477,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureRect2" type="TextureRect" parent="layerLoadGame"]
+modulate = Color( 0.72549, 0.47451, 0.294118, 1 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="layerLoadGame"]
 margin_left = 680.0
 margin_top = 56.0
@@ -647,6 +673,15 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="layerConfigs"]
+modulate = Color( 0.45098, 0.376471, 0.376471, 1 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
