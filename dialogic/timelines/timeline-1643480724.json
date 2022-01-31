@@ -25,10 +25,6 @@
 			"text": "Este foi seu melhor amigo certo ? Realmente o único ouvido que te escutou por muito tempo."
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
-		},
-		{
 			"call_node": {
 				"arguments": [
 					"dialog_not_running"

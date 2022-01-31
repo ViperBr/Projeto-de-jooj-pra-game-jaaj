@@ -15,6 +15,16 @@
 			"set_theme": "theme-1643494449.cfg"
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -25,6 +35,16 @@
 			"wait_seconds": 1
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -33,6 +53,16 @@
 		{
 			"event_id": "dialogic_023",
 			"wait_seconds": 1
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"character": "",
@@ -55,8 +85,14 @@
 			"event_id": "dialogic_042"
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"call_node": {

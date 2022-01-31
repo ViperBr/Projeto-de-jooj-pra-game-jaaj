@@ -41,10 +41,6 @@
 			"event_id": "dialogic_042"
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
-		},
-		{
 			"call_node": {
 				"arguments": [
 					"dialog_not_running"

@@ -33,10 +33,6 @@
 				"target_node_path": "inicio_do_jogo"
 			},
 			"event_id": "dialogic_042"
-		},
-		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
 		}
 	],
 	"metadata": {

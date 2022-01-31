@@ -85,28 +85,3 @@ func dialog_is_running():
 func dialog_not_running():
 	VariableSingleton.is_there_dialog_running = false
 		
-##For TESTING ONLY, REMOVE THIS AFTER THE GAME IS DONE
-func skip_character():
-	#if pressed K (which is the key for skipping)
-	if Input.is_action_just_pressed("skip"):
-		get_node("sombrapos/sombra%s" % data.character).set_animation_shooting_and_dead()
-		data.dialog = 1
-		#data.character += 1
-		data.character = 6 ##substitui aqui pra qual numero do personagem quer ir direto
-		
-		save_state()
-		print_debug("Character do data é : " + str(data.character))
-
-##For TESTING ONLY, REMOVE THIS AFTER THE GAME IS DONE
-func chama_som():
-	#if pressed L (which is the key for playing sound)
-	if Input.is_action_just_pressed("som"):
-		#EfeitosSingleton.play_pistol()
-		EfeitosSingleton.play_paper()
-	
-
-
-##For TESTING ONLY, REMOVE THIS AFTER THE GAME IS DONE
-func _process(delta):
-	skip_character()
-	chama_som()

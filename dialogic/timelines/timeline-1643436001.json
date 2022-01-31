@@ -37,14 +37,30 @@
 			"value": ""
 		},
 		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Este show é somente da sua conta"
 		},
 		{
-			"event_id": "dialogic_022",
-			"transition_duration": 0.5
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"choice": "Quem foi peace ?",
@@ -52,6 +68,16 @@
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"call_node": {
