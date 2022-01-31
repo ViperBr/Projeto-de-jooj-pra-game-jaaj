@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/itens/EfeitosSingleton.gd" type="Script" id=1]
+[ext_resource path="res://sfx/paper_sound.wav" type="AudioStream" id=2]
+[ext_resource path="res://sfx/pistol.wav" type="AudioStream" id=3]
+[ext_resource path="res://sfx/Bottle Break.wav" type="AudioStream" id=4]
+
+[node name="EfeitosSingleton" type="Node"]
+script = ExtResource( 1 )
+paper_sound = ExtResource( 2 )
+pistol = ExtResource( 3 )
+
+[node name="efeito" type="AudioStreamPlayer" parent="."]
+
+[node name="vidro_quebrando" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

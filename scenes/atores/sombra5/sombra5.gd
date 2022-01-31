@@ -36,6 +36,7 @@ func set_animation_shooting():
 func set_animation_shooting_and_dead():
 	if not dead:
 		$AnimatedSprite.play("toma_bala")
+		EfeitosSingleton.play_pistol_delay(1)
 		dead = true
 func set_stopped_fade_to_true():
 	stopped_fade = true

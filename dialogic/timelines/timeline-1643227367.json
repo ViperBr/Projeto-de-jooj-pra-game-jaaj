@@ -45,6 +45,26 @@
 			"event_id": "dialogic_042"
 		},
 		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 1
+		},
+		{
+			"character": "character-1643321552.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Lembre-se que para começar, arraste a arma para baixo.. o mesmo vale para quando for minha vez, porém pra cima."
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
 			"choice": "Não falar nada e olhar um pouco a arma",
 			"condition": "",
 			"definition": "",
@@ -58,6 +78,16 @@
 			"text": "Te aguardo "
 		},
 		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 1
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Lembre-se que para começar, arraste a arma para baixo.. o mesmo vale para quando for minha vez, porém pra cima."
+		},
+		{
 			"call_node": {
 				"arguments": [
 					"dialog_not_running"
@@ -69,6 +99,16 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"dialog_not_running"
+				],
+				"method_name": "dialog_events",
+				"target_node_path": "inicio_do_jogo"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"definition": "1643317029-366",

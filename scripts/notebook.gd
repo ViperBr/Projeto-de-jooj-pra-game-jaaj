@@ -7,6 +7,8 @@ func _ready():
 	$"Notificacao-caderno".visible = VariableSingleton.is_there_something_new
 
 
+
+
 func _on_notebook_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click"):
 		if VariableSingleton.is_notebook_opened:
@@ -14,6 +16,7 @@ func _on_notebook_input_event(viewport, event, shape_idx):
 		else:
 			VariableSingleton.is_notebook_opened = true
 			VariableSingleton.is_notebook_interface_visible = true
+			EfeitosSingleton.play_paper()
 			$AnimatedSprite.play("opening")
 
 

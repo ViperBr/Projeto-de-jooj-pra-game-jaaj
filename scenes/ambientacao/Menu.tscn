@@ -100,13 +100,13 @@ margin_bottom = 1080.0
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="layerBase"]
-margin_left = 1056.0
+margin_left = 923.0
 margin_top = 184.0
-margin_right = 1770.0
+margin_right = 1841.0
 margin_bottom = 313.0
 theme = SubResource( 1 )
 custom_fonts/font = SubResource( 2 )
-text = "O nome do jogo"
+text = "Sombras do passado"
 __meta__ = {
 "_edit_use_anchors_": false
 }

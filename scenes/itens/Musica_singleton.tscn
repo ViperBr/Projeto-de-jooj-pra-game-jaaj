@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/itens/Musica_singleton.gd" type="Script" id=1]
+[ext_resource path="res://music/Tema_do_menu.wav" type="AudioStream" id=2]
+[ext_resource path="res://music/Tema_principal.wav" type="AudioStream" id=3]
+[ext_resource path="res://music/Tema_Final.wav" type="AudioStream" id=4]
+
+[node name="Musica_singleton" type="Node"]
+script = ExtResource( 1 )
+musica_menu = ExtResource( 2 )
+musica_principal = ExtResource( 3 )
+musica_fim_do_jogo = ExtResource( 4 )
+
+[node name="musica" type="AudioStreamPlayer" parent="."]

@@ -78,7 +78,6 @@ texture = ExtResource( 8 )
 expand = true
 
 [node name="foto2" type="TextureRect" parent="Interface_do_caderno/Caderno/fotos"]
-visible = false
 margin_left = 417.0
 margin_top = 145.0
 margin_right = 749.0
@@ -87,7 +86,6 @@ texture = ExtResource( 11 )
 expand = true
 
 [node name="foto3" type="TextureRect" parent="Interface_do_caderno/Caderno/fotos"]
-visible = false
 margin_left = 169.0
 margin_top = 515.0
 margin_right = 501.0
@@ -96,7 +94,6 @@ texture = ExtResource( 10 )
 expand = true
 
 [node name="foto4" type="TextureRect" parent="Interface_do_caderno/Caderno/fotos"]
-visible = false
 margin_left = 1076.0
 margin_top = 117.0
 margin_right = 1408.0
@@ -105,7 +102,6 @@ texture = ExtResource( 9 )
 expand = true
 
 [node name="foto5" type="TextureRect" parent="Interface_do_caderno/Caderno/fotos"]
-visible = false
 margin_left = 1086.0
 margin_top = 510.0
 margin_right = 1418.0

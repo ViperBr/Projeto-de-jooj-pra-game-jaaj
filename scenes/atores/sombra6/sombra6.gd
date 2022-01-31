@@ -39,6 +39,7 @@ func set_stopped_fade_to_true():
 
 func sombra6_se_mata():
 	dead = true
+	EfeitosSingleton.play_pistol_delay(1.4)
 	$AnimatedSprite.play("toma_bala")
 	VariableSingleton.sombra6_weapon_visible = false
 	timer_fim_do_jogo.start()
@@ -46,6 +47,10 @@ func sombra6_se_mata():
 func sombra6_atira_espelho():
 	$AnimatedSprite.play("atira_espelho")
 	VariableSingleton.sombra6_weapon_visible = false
+	EfeitosSingleton.play_pistol_delay(1.3)
+	EfeitosSingleton.play_pistol_delay(1.3+1.3)
+	EfeitosSingleton.play_pistol_delay(1.3+1.3+1.3)
+	EfeitosSingleton.play_broken_glass_delay(1.3+1.3)
 	timer_fim_do_jogo.start()
 func sombra6_guarda_arma():
 	VariableSingleton.sombra6_weapon_visible = true

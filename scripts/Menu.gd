@@ -9,6 +9,7 @@ var save_path3 = SAVE_DIR + "save3.dat"
 var save_path
 
 func _ready():
+	MusicaSingleton.play_menu()
 	for child in $".".get_children():
 		child.visible = false
 	$layerBase.visible = true;

@@ -27,6 +27,7 @@ func set_animation_shooting():
 
 func set_animation_shooting_and_dead():
 	$AnimatedSprite.play("atirando_morrendo")
+	EfeitosSingleton.play_pistol_delay(4)
 	
 func quem_e_peace():
 	$AnimatedSprite.play("olhando_pra_baixo")

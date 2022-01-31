@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Tema_do_menu.wav-a6e06f7e7247d4f81a84dae3e08ee981.sample"
+
+[deps]
+
+source_file="res://music/Tema_do_menu.wav"
+dest_files=[ "res://.import/Tema_do_menu.wav-a6e06f7e7247d4f81a84dae3e08ee981.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

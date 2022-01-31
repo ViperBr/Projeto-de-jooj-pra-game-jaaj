@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Tema_Final.wav-644b8f481ed2f46aa8be451ed9724c4b.sample"
+
+[deps]
+
+source_file="res://music/Tema_Final.wav"
+dest_files=[ "res://.import/Tema_Final.wav-644b8f481ed2f46aa8be451ed9724c4b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

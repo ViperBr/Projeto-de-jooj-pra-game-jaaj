@@ -32,6 +32,7 @@ tracks/1/keys = {
 }
 
 [node name="CanvasLayer" type="CanvasLayer"]
+layer = -1
 script = ExtResource( 2 )
 
 [node name="Control" type="Control" parent="."]
